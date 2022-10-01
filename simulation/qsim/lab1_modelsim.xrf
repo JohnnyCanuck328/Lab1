@@ -1,7 +1,9 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/threebitshiftregister.vhd
+source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux.vhd
+source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/fourMux.vhd
+source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd
-source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/threebitadder.vhd
-source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/threebitregister.vhd
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/enardFF_2.vhd
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/db/lab1.cbx.xml
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
