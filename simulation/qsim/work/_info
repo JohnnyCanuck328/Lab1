@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
+venARdFF_2
+Z1 !s100 @L?:eLC`nbWBgQmP?KBYk1
+Z2 IOR1j:RZT2ZlOBkQLTmG461
+Z3 VU9@<El_UX9ibjHjgB_7Rg2
+Z4 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
+Z5 w1664534183
+Z6 8lab1.vo
+Z7 Flab1.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|lab1.vo|
+Z10 o-work work -O0
+Z11 nen@a@rd@f@f_2
+!i10b 1
+!s85 0
+Z12 !s108 1664534184.687000
+Z13 !s107 lab1.vo|
+!s101 -O0
+venARdFF_2_vlg_check_tst
+!i10b 1
+Z14 !s100 l7QSad;ciBlPaZBX]F@Ph1
+Z15 Ii;;YA5efen18LbP65AE6E1
+Z16 VYjfgT_S0?OXMg[?eRnW3]3
+R4
+Z17 w1664534182
+Z18 8Waveform1.vwf.vt
+Z19 FWaveform1.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1664534184.773000
+Z21 !s107 Waveform1.vwf.vt|
+Z22 !s90 -work|work|Waveform1.vwf.vt|
+!s101 -O0
+R10
+Z23 nen@a@rd@f@f_2_vlg_check_tst
+venARdFF_2_vlg_sample_tst
+!i10b 1
+Z24 !s100 D_<_HJFlAeQ[`Z>a@X0fL3
+Z25 I^MF289_1PS_5>]jEl[Q860
+Z26 VfmkZO5eKLdI[e8>:];40^0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 nen@a@rd@f@f_2_vlg_sample_tst
+venARdFF_2_vlg_vec_tst
+!i10b 1
+Z28 !s100 C_4[9QJd3Pfdm0:XSm`LY0
+Z29 ImC1C0k9_FJM4PEQcYH;Z>0
+Z30 V@[TdaAjfCA?1aH^^^7Rck2
+R4
+R17
+R18
+R19
+Z31 L0 185
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 nen@a@rd@f@f_2_vlg_vec_tst

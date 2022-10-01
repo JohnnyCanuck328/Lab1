@@ -1,9 +1,0 @@
-|enardFF_2
-i_resetBar => int_q.ACLR
-i_d => int_q.DATAIN
-i_enable => int_q.ENA
-i_clock => int_q.CLK
-o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
-o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
-
-
