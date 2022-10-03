@@ -1,0 +1,32 @@
+--library ieee;
+--use ieee.std_logic_1164.all;
+
+--entity datapath is
+--	port(leftIn, rightIn: in std_logic
+--			led: out std_logic_vector(7 downto 0));
+--end datapath;
+
+--architecture structData of datapath is
+
+--	component eightBitUniversalReg
+--		PORT(
+--			i_resetBar, i_load	: IN	STD_LOGIC;
+--			shiftDir, mode: in std_logic;
+--			rightShiftIn, leftShiftIn: in std_logic;
+--			i_clock			: IN	STD_LOGIC;
+--			i_Value			: IN	STD_LOGIC_VECTOR(7 downto 0);
+--			o_Value			: OUT	STD_LOGIC_VECTOR(7 downto 0));
+--	END component;
+	
+--	component h2InMux
+--		port(w0,w1: in std_logic;
+--		en: in std_logic;
+--		y: out std_logic);
+--	end component;
+	
+--	component h4InMux
+--		port(uw0, uw1, uw2, uw3: in std_logic;
+--		s0, s1: in std_logic;
+--		uy: out std_logic);
+--	end component;
+--end structData;
