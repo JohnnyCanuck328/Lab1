@@ -1,27 +1,41 @@
 library ieee;
 use ieee.std_logic_1164.all;
 ------------------------------------------------------
---check whether reset is active low or high
+--keep reset 1, turning reset to 0 will wipe regs
+--controller 1 means load, 0 means shift
 ------------------------------------------------------
 entity datapath is
 	port(leftIn, rightIn: in std_logic;
 			g_clk: in std_logic;
 			globalRes: in std_logic;
-			--LFRT == mode
-			LFRT: in std_logic_vector(1 downto 0);
+			lCont, rCont: in std_logic;
+			pLoadR, pLoadL: in std_logic_vector(7 downto 0);
+			pLoadD: in std_logic;
 			led: out std_logic_vector(7 downto 0));
 end datapath;
 
 architecture structData of datapath is
 
-	component eightBitUniversalReg
-		PORT(
-			i_resetBar, i_load	: IN	STD_LOGIC;
-			shiftDir, mode: in std_logic;
-			rightShiftIn, leftShiftIn: in std_logic;
-			i_clock			: IN	STD_LOGIC;
-			i_Value			: IN	STD_LOGIC_VECTOR(7 downto 0);
-			o_Value			: OUT	STD_LOGIC_VECTOR(7 downto 0));
+	component eightBitRightShift
+		PORT (controller :  IN  STD_LOGIC;
+		clk :  IN  STD_LOGIC;
+		reset :  IN  STD_LOGIC;
+		shiftIn :  IN  STD_LOGIC;
+		enable :  IN  STD_LOGIC;
+		inp :  IN  STD_LOGIC_VECTOR(7 downto 0);
+		output0, output1, output2, output3, output4, output5, output6, output7 :  OUT  STD_LOGIC;
+		NOToutput:  OUT  STD_LOGIC_VECTOR(7 downto 0));
+	END component;
+	
+	component eightBitLeftShift
+		PORT (controller :  IN  STD_LOGIC;
+		clk :  IN  STD_LOGIC;
+		reset :  IN  STD_LOGIC;
+		shiftIn :  IN  STD_LOGIC;
+		enable :  IN  STD_LOGIC;
+		inp :  IN  STD_LOGIC_VECTOR(7 downto 0);
+		output0, output1, output2, output3, output4, output5, output6, output7 :  OUT  STD_LOGIC;
+		NOToutput:  OUT  STD_LOGIC_VECTOR(7 downto 0));
 	END component;
 	
 	component h2InMux
@@ -30,7 +44,7 @@ architecture structData of datapath is
 		y: out std_logic_vector(7 downto 0));
 	end component;
 	
-	component h4InMux
+	component fourMux
 		port(uw0, uw1, uw2, uw3: in std_logic_vector(7 downto 0);
 		s0, s1: in std_logic;
 		uy: out std_logic_vector(7 downto 0));
@@ -42,9 +56,6 @@ architecture structData of datapath is
 	signal mux2Out: std_logic_vector(7 downto 0);
 	signal RMASKout: std_logic_vector(7 downto 0);
 	signal LMASKout: std_logic_vector(7 downto 0);
-	signal pLoadL: std_logic_vector(7 downto 0);
-	signal pLoadR: std_logic_vector(7 downto 0);
-	signal pLoadD: std_logic;
 	
 	signal vcc: std_logic := '1';
 	signal ground: std_logic := '0';
@@ -56,18 +67,21 @@ architecture structData of datapath is
 	
 	leftOrRight <= RMASKout OR LMASKout;
 	
-	LMASK: eightBitUniversalReg port map(i_resetBar => globalRes, i_load => leftIn, shiftDir=> vcc, mode => LFRT(0)
-													, rightShiftIn => vcc, leftShiftIn => vcc, i_clock => g_clk, i_Value => pLoadL, o_Value => LMASKout);
+	LMASK: eightBitLeftShift PORT MAP(controller => rCont, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => pLoadL,
+													output0 => RMASKout(0), output1 => RMASKout(1), output2 => RMASKout(2), output3 => RMASKout(3), output4 => RMASKout(4),
+													output5 => RMASKout(5), output6 => RMASKout(6), output7 => RMASKout(7), NOToutput => open);
 	
-	RMASK: eightBitUniversalReg port map(i_resetBar => globalRes, i_load => rightIn, shiftDir => ground, mode => LFRT(1)
-													, rightShiftIn => vcc, leftShiftIn => vcc, i_clock => g_clk, i_Value => pLoadR, o_Value => RMASKout);
-													
-	Display: eightBitUniversalReg port map(i_resetBar => globalRes, i_load => '1', shiftDir => ground, mode => ground
-													, rightShiftIn => ground, leftShiftIn => ground, i_clock => g_clk, i_Value => mux2Out, o_Value => led);
+	RMASK: eightBitRightShift PORT MAP(controller => lCont, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => pLoadR,
+													output0 => LMASKout(0), output1 => LMASKout(1), output2 => LMASKout(2), output3 => LMASKout(3), output4 => LMASKout(4),
+													output5 => LMASKout(5), output6 => LMASKout(6), output7 => LMASKout(7), NOToutput => open);
 	
 	mux2: h2InMux port map(w0 => mux4Out, w1 => "00000000", en => pLoadD, y => mux2Out);
 	
-	mux4: h4InMux port map(uw0 => "00000000", uw1 => LMASKout, uw2 => RMASKout, uw3 => leftOrRight, s0 => leftIn, s1 => rightIn, uy => mux4Out);
+	mux4: fourMux port map(uw0 => "00000000", uw1 => LMASKout, uw2 => RMASKout, uw3 => leftOrRight, s0 => leftIn, s1 => rightIn, uy => mux4Out);
+	
+	Display: eightBitRightShift PORT MAP(controller => vcc, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => mux2Out,
+													output0 => led(0), output1 => led(1), output2 => led(2), output3 => led(3), output4 => led(4),
+													output5 => led(5), output6 => led(6), output7 => led(7), NOToutput => open);
 	
 	
 end structData;

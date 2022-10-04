@@ -1,0 +1,647 @@
+|datapath
+leftIn => fourMux:mux4.s0
+rightIn => eightBitLeftShift:LMASK.enable
+rightIn => eightBitRightShift:RMASK.enable
+rightIn => fourMux:mux4.s1
+rightIn => eightBitRightShift:Display.enable
+g_clk => eightBitLeftShift:LMASK.clk
+g_clk => eightBitRightShift:RMASK.clk
+g_clk => eightBitRightShift:Display.clk
+globalRes => eightBitLeftShift:LMASK.reset
+globalRes => eightBitRightShift:RMASK.reset
+globalRes => eightBitRightShift:Display.reset
+lCont => eightBitRightShift:RMASK.controller
+rCont => eightBitLeftShift:LMASK.controller
+pLoadR[0] => eightBitRightShift:RMASK.inp[0]
+pLoadR[1] => eightBitRightShift:RMASK.inp[1]
+pLoadR[2] => eightBitRightShift:RMASK.inp[2]
+pLoadR[3] => eightBitRightShift:RMASK.inp[3]
+pLoadR[4] => eightBitRightShift:RMASK.inp[4]
+pLoadR[5] => eightBitRightShift:RMASK.inp[5]
+pLoadR[6] => eightBitRightShift:RMASK.inp[6]
+pLoadR[7] => eightBitRightShift:RMASK.inp[7]
+pLoadL[0] => eightBitLeftShift:LMASK.inp[0]
+pLoadL[1] => eightBitLeftShift:LMASK.inp[1]
+pLoadL[2] => eightBitLeftShift:LMASK.inp[2]
+pLoadL[3] => eightBitLeftShift:LMASK.inp[3]
+pLoadL[4] => eightBitLeftShift:LMASK.inp[4]
+pLoadL[5] => eightBitLeftShift:LMASK.inp[5]
+pLoadL[6] => eightBitLeftShift:LMASK.inp[6]
+pLoadL[7] => eightBitLeftShift:LMASK.inp[7]
+pLoadD => h2InMux:mux2.en
+led[0] <= eightBitRightShift:Display.output0
+led[1] <= eightBitRightShift:Display.output1
+led[2] <= eightBitRightShift:Display.output2
+led[3] <= eightBitRightShift:Display.output3
+led[4] <= eightBitRightShift:Display.output4
+led[5] <= eightBitRightShift:Display.output5
+led[6] <= eightBitRightShift:Display.output6
+led[7] <= eightBitRightShift:Display.output7
+
+
+|datapath|eightBitLeftShift:LMASK
+controller => loadOp0.IN0
+controller => loadOp1.IN0
+controller => loadOp2.IN0
+controller => loadOp3.IN0
+controller => loadOp4.IN0
+controller => loadOp5.IN0
+controller => loadOp6.IN0
+controller => loadOp7.IN0
+controller => shiftOp0.IN0
+controller => shiftOp1.IN1
+controller => shiftOp2.IN1
+controller => shiftOp3.IN1
+controller => shiftOp4.IN1
+controller => shiftOp5.IN1
+controller => shiftOp6.IN1
+controller => shiftOp7.IN1
+clk => enardff_2:bit0.i_clock
+clk => enardff_2:bit1.i_clock
+clk => enardff_2:bit2.i_clock
+clk => enardff_2:bit3.i_clock
+clk => enardff_2:bit4.i_clock
+clk => enardff_2:bit5.i_clock
+clk => enardff_2:bit6.i_clock
+clk => enardff_2:bit7.i_clock
+reset => enardff_2:bit0.i_resetBar
+reset => enardff_2:bit1.i_resetBar
+reset => enardff_2:bit2.i_resetBar
+reset => enardff_2:bit3.i_resetBar
+reset => enardff_2:bit4.i_resetBar
+reset => enardff_2:bit5.i_resetBar
+reset => enardff_2:bit6.i_resetBar
+reset => enardff_2:bit7.i_resetBar
+shiftIn => shiftOp0.IN1
+enable => enardff_2:bit0.i_enable
+enable => enardff_2:bit1.i_enable
+enable => enardff_2:bit2.i_enable
+enable => enardff_2:bit3.i_enable
+enable => enardff_2:bit4.i_enable
+enable => enardff_2:bit5.i_enable
+enable => enardff_2:bit6.i_enable
+enable => enardff_2:bit7.i_enable
+inp[0] => loadOp0.IN1
+inp[1] => loadOp1.IN1
+inp[2] => loadOp2.IN1
+inp[3] => loadOp3.IN1
+inp[4] => loadOp4.IN1
+inp[5] => loadOp5.IN1
+inp[6] => loadOp6.IN1
+inp[7] => loadOp7.IN1
+output0 <= enardff_2:bit0.o_q
+output1 <= enardff_2:bit1.o_q
+output2 <= enardff_2:bit2.o_q
+output3 <= enardff_2:bit3.o_q
+output4 <= enardff_2:bit4.o_q
+output5 <= enardff_2:bit5.o_q
+output6 <= enardff_2:bit6.o_q
+output7 <= enardff_2:bit7.o_q
+NOToutput[0] <= enardff_2:bit0.o_qBar
+NOToutput[1] <= enardff_2:bit1.o_qBar
+NOToutput[2] <= enardff_2:bit2.o_qBar
+NOToutput[3] <= enardff_2:bit3.o_qBar
+NOToutput[4] <= enardff_2:bit4.o_qBar
+NOToutput[5] <= enardff_2:bit5.o_qBar
+NOToutput[6] <= enardff_2:bit6.o_qBar
+NOToutput[7] <= enardff_2:bit7.o_qBar
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit1
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit2
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit3
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit4
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit5
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit6
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit7
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK
+controller => loadOp0.IN0
+controller => loadOp1.IN0
+controller => loadOp2.IN0
+controller => loadOp3.IN0
+controller => loadOp4.IN0
+controller => loadOp5.IN0
+controller => loadOp6.IN0
+controller => loadOp7.IN0
+controller => shiftOp0.IN1
+controller => shiftOp1.IN1
+controller => shiftOp2.IN1
+controller => shiftOp3.IN1
+controller => shiftOp4.IN1
+controller => shiftOp5.IN1
+controller => shiftOp6.IN1
+controller => shiftOp7.IN0
+clk => enardff_2:b2v_bit0.i_clock
+clk => enardff_2:b2v_bit1.i_clock
+clk => enardff_2:b2v_bit2.i_clock
+clk => enardff_2:b2v_bit3.i_clock
+clk => enardff_2:b2v_bit4.i_clock
+clk => enardff_2:b2v_bit5.i_clock
+clk => enardff_2:b2v_bit6.i_clock
+clk => enardff_2:b2v_bit7.i_clock
+reset => enardff_2:b2v_bit0.i_resetBar
+reset => enardff_2:b2v_bit1.i_resetBar
+reset => enardff_2:b2v_bit2.i_resetBar
+reset => enardff_2:b2v_bit3.i_resetBar
+reset => enardff_2:b2v_bit4.i_resetBar
+reset => enardff_2:b2v_bit5.i_resetBar
+reset => enardff_2:b2v_bit6.i_resetBar
+reset => enardff_2:b2v_bit7.i_resetBar
+shiftIn => shiftOp7.IN1
+enable => enardff_2:b2v_bit0.i_enable
+enable => enardff_2:b2v_bit1.i_enable
+enable => enardff_2:b2v_bit2.i_enable
+enable => enardff_2:b2v_bit3.i_enable
+enable => enardff_2:b2v_bit4.i_enable
+enable => enardff_2:b2v_bit5.i_enable
+enable => enardff_2:b2v_bit6.i_enable
+enable => enardff_2:b2v_bit7.i_enable
+inp[0] => loadOp0.IN1
+inp[1] => loadOp1.IN1
+inp[2] => loadOp2.IN1
+inp[3] => loadOp3.IN1
+inp[4] => loadOp4.IN1
+inp[5] => loadOp5.IN1
+inp[6] => loadOp6.IN1
+inp[7] => loadOp7.IN1
+output0 <= enardff_2:b2v_bit0.o_q
+output1 <= enardff_2:b2v_bit1.o_q
+output2 <= enardff_2:b2v_bit2.o_q
+output3 <= enardff_2:b2v_bit3.o_q
+output4 <= enardff_2:b2v_bit4.o_q
+output5 <= enardff_2:b2v_bit5.o_q
+output6 <= enardff_2:b2v_bit6.o_q
+output7 <= enardff_2:b2v_bit7.o_q
+NOToutput[0] <= enardff_2:b2v_bit0.o_qBar
+NOToutput[1] <= enardff_2:b2v_bit1.o_qBar
+NOToutput[2] <= enardff_2:b2v_bit2.o_qBar
+NOToutput[3] <= enardff_2:b2v_bit3.o_qBar
+NOToutput[4] <= enardff_2:b2v_bit4.o_qBar
+NOToutput[5] <= enardff_2:b2v_bit5.o_qBar
+NOToutput[6] <= enardff_2:b2v_bit6.o_qBar
+NOToutput[7] <= enardff_2:b2v_bit7.o_qBar
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit1
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit2
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit3
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit4
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit5
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit6
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit7
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|h2InMux:mux2
+w0[0] => y.DATAA
+w0[1] => y.DATAA
+w0[2] => y.DATAA
+w0[3] => y.DATAA
+w0[4] => y.DATAA
+w0[5] => y.DATAA
+w0[6] => y.DATAA
+w0[7] => y.DATAA
+w1[0] => y.DATAB
+w1[1] => y.DATAB
+w1[2] => y.DATAB
+w1[3] => y.DATAB
+w1[4] => y.DATAB
+w1[5] => y.DATAB
+w1[6] => y.DATAB
+w1[7] => y.DATAB
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|fourMux:mux4
+uw0[0] => h2InMux:twoIN0.w0[0]
+uw0[1] => h2InMux:twoIN0.w0[1]
+uw0[2] => h2InMux:twoIN0.w0[2]
+uw0[3] => h2InMux:twoIN0.w0[3]
+uw0[4] => h2InMux:twoIN0.w0[4]
+uw0[5] => h2InMux:twoIN0.w0[5]
+uw0[6] => h2InMux:twoIN0.w0[6]
+uw0[7] => h2InMux:twoIN0.w0[7]
+uw1[0] => h2InMux:twoIN0.w1[0]
+uw1[1] => h2InMux:twoIN0.w1[1]
+uw1[2] => h2InMux:twoIN0.w1[2]
+uw1[3] => h2InMux:twoIN0.w1[3]
+uw1[4] => h2InMux:twoIN0.w1[4]
+uw1[5] => h2InMux:twoIN0.w1[5]
+uw1[6] => h2InMux:twoIN0.w1[6]
+uw1[7] => h2InMux:twoIN0.w1[7]
+uw2[0] => h2InMux:twoIN1.w0[0]
+uw2[1] => h2InMux:twoIN1.w0[1]
+uw2[2] => h2InMux:twoIN1.w0[2]
+uw2[3] => h2InMux:twoIN1.w0[3]
+uw2[4] => h2InMux:twoIN1.w0[4]
+uw2[5] => h2InMux:twoIN1.w0[5]
+uw2[6] => h2InMux:twoIN1.w0[6]
+uw2[7] => h2InMux:twoIN1.w0[7]
+uw3[0] => h2InMux:twoIN1.w1[0]
+uw3[1] => h2InMux:twoIN1.w1[1]
+uw3[2] => h2InMux:twoIN1.w1[2]
+uw3[3] => h2InMux:twoIN1.w1[3]
+uw3[4] => h2InMux:twoIN1.w1[4]
+uw3[5] => h2InMux:twoIN1.w1[5]
+uw3[6] => h2InMux:twoIN1.w1[6]
+uw3[7] => h2InMux:twoIN1.w1[7]
+s0 => h2InMux:twoIN0.en
+s0 => h2InMux:twoIN1.en
+s1 => h2InMux:twoIN2.en
+uy[0] <= h2InMux:twoIN2.y[0]
+uy[1] <= h2InMux:twoIN2.y[1]
+uy[2] <= h2InMux:twoIN2.y[2]
+uy[3] <= h2InMux:twoIN2.y[3]
+uy[4] <= h2InMux:twoIN2.y[4]
+uy[5] <= h2InMux:twoIN2.y[5]
+uy[6] <= h2InMux:twoIN2.y[6]
+uy[7] <= h2InMux:twoIN2.y[7]
+
+
+|datapath|fourMux:mux4|h2InMux:twoIN0
+w0[0] => y.DATAA
+w0[1] => y.DATAA
+w0[2] => y.DATAA
+w0[3] => y.DATAA
+w0[4] => y.DATAA
+w0[5] => y.DATAA
+w0[6] => y.DATAA
+w0[7] => y.DATAA
+w1[0] => y.DATAB
+w1[1] => y.DATAB
+w1[2] => y.DATAB
+w1[3] => y.DATAB
+w1[4] => y.DATAB
+w1[5] => y.DATAB
+w1[6] => y.DATAB
+w1[7] => y.DATAB
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|fourMux:mux4|h2InMux:twoIN1
+w0[0] => y.DATAA
+w0[1] => y.DATAA
+w0[2] => y.DATAA
+w0[3] => y.DATAA
+w0[4] => y.DATAA
+w0[5] => y.DATAA
+w0[6] => y.DATAA
+w0[7] => y.DATAA
+w1[0] => y.DATAB
+w1[1] => y.DATAB
+w1[2] => y.DATAB
+w1[3] => y.DATAB
+w1[4] => y.DATAB
+w1[5] => y.DATAB
+w1[6] => y.DATAB
+w1[7] => y.DATAB
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|fourMux:mux4|h2InMux:twoIN2
+w0[0] => y.DATAA
+w0[1] => y.DATAA
+w0[2] => y.DATAA
+w0[3] => y.DATAA
+w0[4] => y.DATAA
+w0[5] => y.DATAA
+w0[6] => y.DATAA
+w0[7] => y.DATAA
+w1[0] => y.DATAB
+w1[1] => y.DATAB
+w1[2] => y.DATAB
+w1[3] => y.DATAB
+w1[4] => y.DATAB
+w1[5] => y.DATAB
+w1[6] => y.DATAB
+w1[7] => y.DATAB
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display
+controller => loadOp0.IN0
+controller => loadOp1.IN0
+controller => loadOp2.IN0
+controller => loadOp3.IN0
+controller => loadOp4.IN0
+controller => loadOp5.IN0
+controller => loadOp6.IN0
+controller => loadOp7.IN0
+controller => shiftOp0.IN1
+controller => shiftOp1.IN1
+controller => shiftOp2.IN1
+controller => shiftOp3.IN1
+controller => shiftOp4.IN1
+controller => shiftOp5.IN1
+controller => shiftOp6.IN1
+controller => shiftOp7.IN0
+clk => enardff_2:b2v_bit0.i_clock
+clk => enardff_2:b2v_bit1.i_clock
+clk => enardff_2:b2v_bit2.i_clock
+clk => enardff_2:b2v_bit3.i_clock
+clk => enardff_2:b2v_bit4.i_clock
+clk => enardff_2:b2v_bit5.i_clock
+clk => enardff_2:b2v_bit6.i_clock
+clk => enardff_2:b2v_bit7.i_clock
+reset => enardff_2:b2v_bit0.i_resetBar
+reset => enardff_2:b2v_bit1.i_resetBar
+reset => enardff_2:b2v_bit2.i_resetBar
+reset => enardff_2:b2v_bit3.i_resetBar
+reset => enardff_2:b2v_bit4.i_resetBar
+reset => enardff_2:b2v_bit5.i_resetBar
+reset => enardff_2:b2v_bit6.i_resetBar
+reset => enardff_2:b2v_bit7.i_resetBar
+shiftIn => shiftOp7.IN1
+enable => enardff_2:b2v_bit0.i_enable
+enable => enardff_2:b2v_bit1.i_enable
+enable => enardff_2:b2v_bit2.i_enable
+enable => enardff_2:b2v_bit3.i_enable
+enable => enardff_2:b2v_bit4.i_enable
+enable => enardff_2:b2v_bit5.i_enable
+enable => enardff_2:b2v_bit6.i_enable
+enable => enardff_2:b2v_bit7.i_enable
+inp[0] => loadOp0.IN1
+inp[1] => loadOp1.IN1
+inp[2] => loadOp2.IN1
+inp[3] => loadOp3.IN1
+inp[4] => loadOp4.IN1
+inp[5] => loadOp5.IN1
+inp[6] => loadOp6.IN1
+inp[7] => loadOp7.IN1
+output0 <= enardff_2:b2v_bit0.o_q
+output1 <= enardff_2:b2v_bit1.o_q
+output2 <= enardff_2:b2v_bit2.o_q
+output3 <= enardff_2:b2v_bit3.o_q
+output4 <= enardff_2:b2v_bit4.o_q
+output5 <= enardff_2:b2v_bit5.o_q
+output6 <= enardff_2:b2v_bit6.o_q
+output7 <= enardff_2:b2v_bit7.o_q
+NOToutput[0] <= enardff_2:b2v_bit0.o_qBar
+NOToutput[1] <= enardff_2:b2v_bit1.o_qBar
+NOToutput[2] <= enardff_2:b2v_bit2.o_qBar
+NOToutput[3] <= enardff_2:b2v_bit3.o_qBar
+NOToutput[4] <= enardff_2:b2v_bit4.o_qBar
+NOToutput[5] <= enardff_2:b2v_bit5.o_qBar
+NOToutput[6] <= enardff_2:b2v_bit6.o_qBar
+NOToutput[7] <= enardff_2:b2v_bit7.o_qBar
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit1
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit2
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit3
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit4
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit5
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit6
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit7
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+

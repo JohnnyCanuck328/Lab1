@@ -4,82 +4,152 @@ K3
 cModel Technology
 Z0 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
 venARdFF_2
-Z1 !s100 @L?:eLC`nbWBgQmP?KBYk1
-Z2 IOR1j:RZT2ZlOBkQLTmG461
-Z3 VU9@<El_UX9ibjHjgB_7Rg2
-Z4 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
-Z5 w1664534183
-Z6 8lab1.vo
-Z7 Flab1.vo
+IOR1j:RZT2ZlOBkQLTmG461
+VU9@<El_UX9ibjHjgB_7Rg2
+Z1 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
+w1664534183
+8lab1.vo
+Flab1.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z2 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|lab1.vo|
-Z10 o-work work -O0
-Z11 nen@a@rd@f@f_2
+Z3 o-work work -O0
+nen@a@rd@f@f_2
+!s100 @L?:eLC`nbWBgQmP?KBYk1
+!s90 -work|work|lab1.vo|
+!s108 1664534184.687000
+!s107 lab1.vo|
 !i10b 1
 !s85 0
-Z12 !s108 1664534184.687000
-Z13 !s107 lab1.vo|
 !s101 -O0
 venARdFF_2_vlg_check_tst
-!i10b 1
-Z14 !s100 l7QSad;ciBlPaZBX]F@Ph1
-Z15 Ii;;YA5efen18LbP65AE6E1
-Z16 VYjfgT_S0?OXMg[?eRnW3]3
-R4
-Z17 w1664534182
-Z18 8Waveform1.vwf.vt
-Z19 FWaveform1.vwf.vt
+Ii;;YA5efen18LbP65AE6E1
+VYjfgT_S0?OXMg[?eRnW3]3
+R1
+Z4 w1664534182
+Z5 8Waveform1.vwf.vt
+Z6 FWaveform1.vwf.vt
 L0 63
-R8
+R2
 r1
-!s85 0
 31
-Z20 !s108 1664534184.773000
-Z21 !s107 Waveform1.vwf.vt|
-Z22 !s90 -work|work|Waveform1.vwf.vt|
+Z7 !s108 1664534184.773000
+Z8 !s107 Waveform1.vwf.vt|
+Z9 !s90 -work|work|Waveform1.vwf.vt|
+R3
+nen@a@rd@f@f_2_vlg_check_tst
+!s100 l7QSad;ciBlPaZBX]F@Ph1
+!i10b 1
+!s85 0
 !s101 -O0
-R10
-Z23 nen@a@rd@f@f_2_vlg_check_tst
 venARdFF_2_vlg_sample_tst
-!i10b 1
-Z24 !s100 D_<_HJFlAeQ[`Z>a@X0fL3
-Z25 I^MF289_1PS_5>]jEl[Q860
-Z26 VfmkZO5eKLdI[e8>:];40^0
+I^MF289_1PS_5>]jEl[Q860
+VfmkZO5eKLdI[e8>:];40^0
+R1
 R4
-R17
-R18
-R19
+R5
+R6
 L0 29
-R8
+R2
 r1
-!s85 0
 31
-R20
-R21
-R22
-!s101 -O0
-R10
-Z27 nen@a@rd@f@f_2_vlg_sample_tst
-venARdFF_2_vlg_vec_tst
+R7
+R8
+R9
+R3
+nen@a@rd@f@f_2_vlg_sample_tst
+!s100 D_<_HJFlAeQ[`Z>a@X0fL3
 !i10b 1
-Z28 !s100 C_4[9QJd3Pfdm0:XSm`LY0
-Z29 ImC1C0k9_FJM4PEQcYH;Z>0
-Z30 V@[TdaAjfCA?1aH^^^7Rck2
+!s85 0
+!s101 -O0
+venARdFF_2_vlg_vec_tst
+ImC1C0k9_FJM4PEQcYH;Z>0
+V@[TdaAjfCA?1aH^^^7Rck2
+R1
 R4
+R5
+R6
+L0 185
+R2
+r1
+31
+R7
+R8
+R9
+R3
+nen@a@rd@f@f_2_vlg_vec_tst
+!s100 C_4[9QJd3Pfdm0:XSm`LY0
+!i10b 1
+!s85 0
+!s101 -O0
+Eh2inmux
+Z10 w1664791166
+Z11 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z12 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R1
+Z13 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux.vhd
+Z14 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux.vhd
+l0
+L4
+Vgcc<FBeL_QhioHc:jI4f[1
+Z15 OV;C;10.1d;51
+32
+Z16 !s108 1664802290.256000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux.vhd|
+Z18 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux.vhd|
+Z19 o-work work -2002 -explicit -O0
+Z20 tExplicit 1
+!s100 @6DJ[HQZ35o:BmKD1mkKh3
+!i10b 1
+Abehav2inmux
+R11
+R12
+DEx4 work 7 h2inmux 0 22 gcc<FBeL_QhioHc:jI4f[1
+l12
+L11
+VjYC4N_0HOF0fTNI5ROm:22
+R15
+32
+R16
 R17
 R18
 R19
-Z31 L0 185
-R8
-r1
-!s85 0
-31
 R20
-R21
-R22
-!s101 -O0
-R10
-Z32 nen@a@rd@f@f_2_vlg_vec_tst
+!s100 fYDE?>GE0LP@dVW7aTK>b1
+!i10b 1
+Eh2inmux_tb
+Z21 w1664791379
+R11
+R12
+R1
+Z22 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux_tb.vhd
+Z23 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux_tb.vhd
+l0
+L4
+VTSHnkB^Q3j8c4L^bC8L:f3
+!s100 C5Nj5?4X`gGF9hc>j8V?B1
+R15
+32
+!i10b 1
+Z24 !s108 1664802290.477000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux_tb.vhd|
+Z26 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/simulation/qsim/h2InMux_tb.vhd|
+R19
+R20
+Atwointest
+R11
+R12
+DEx4 work 10 h2inmux_tb 0 22 TSHnkB^Q3j8c4L^bC8L:f3
+l21
+L7
+V4mmXQa6A]99]n0?GVU3m21
+!s100 jHZfnLB`>L1OD6jehRfY03
+R15
+32
+!i10b 1
+R24
+R25
+R26
+R19
+R20

@@ -1,13 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity h4InMux is
+entity fourMux is
 	port(uw0, uw1, uw2, uw3: in std_logic_vector(7 downto 0);
 	s0, s1: in std_logic;
 	uy: out std_logic_vector(7 downto 0));
-end h4InMux;
+end fourMux;
 
-architecture struct4InMux of h4InMux is
+architecture struct4InMux of fourMux is
 	component h2InMux
 		port (w0, w1: in std_logic_vector(7 downto 0);
 				en: in std_logic;
