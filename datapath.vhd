@@ -8,9 +8,7 @@ entity datapath is
 	port(leftIn, rightIn: in std_logic;
 			g_clk: in std_logic;
 			globalRes: in std_logic;
-			lCont, rCont: in std_logic;
-			pLoadR, pLoadL: in std_logic_vector(7 downto 0);
-			pLoadD: in std_logic;
+			pLoadD, pLoadL, pLoadR: in std_logic;
 			led: out std_logic_vector(7 downto 0));
 end datapath;
 
@@ -56,6 +54,7 @@ architecture structData of datapath is
 	signal mux2Out: std_logic_vector(7 downto 0);
 	signal RMASKout: std_logic_vector(7 downto 0);
 	signal LMASKout: std_logic_vector(7 downto 0);
+	signal LRhigh: std_logic;
 	
 	signal vcc: std_logic := '1';
 	signal ground: std_logic := '0';
@@ -66,20 +65,21 @@ architecture structData of datapath is
 	begin
 	
 	leftOrRight <= RMASKout OR LMASKout;
+	LRhigh <= leftIn or rightIn;
 	
-	LMASK: eightBitLeftShift PORT MAP(controller => rCont, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => pLoadL,
-													output0 => RMASKout(0), output1 => RMASKout(1), output2 => RMASKout(2), output3 => RMASKout(3), output4 => RMASKout(4),
-													output5 => RMASKout(5), output6 => RMASKout(6), output7 => RMASKout(7), NOToutput => open);
-	
-	RMASK: eightBitRightShift PORT MAP(controller => lCont, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => pLoadR,
+	LMASK: eightBitLeftShift PORT MAP(controller => pLoadL, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => leftIn, inp => "00000001",
 													output0 => LMASKout(0), output1 => LMASKout(1), output2 => LMASKout(2), output3 => LMASKout(3), output4 => LMASKout(4),
 													output5 => LMASKout(5), output6 => LMASKout(6), output7 => LMASKout(7), NOToutput => open);
 	
-	mux2: h2InMux port map(w0 => mux4Out, w1 => "00000000", en => pLoadD, y => mux2Out);
+	RMASK: eightBitRightShift PORT MAP(controller => pLoadR, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => "10000000",
+													output0 => RMASKout(0), output1 => RMASKout(1), output2 => RMASKout(2), output3 => RMASKout(3), output4 => RMASKout(4),
+													output5 => RMASKout(5), output6 => RMASKout(6), output7 => RMASKout(7), NOToutput => open);
 	
 	mux4: fourMux port map(uw0 => "00000000", uw1 => LMASKout, uw2 => RMASKout, uw3 => leftOrRight, s0 => leftIn, s1 => rightIn, uy => mux4Out);
 	
-	Display: eightBitRightShift PORT MAP(controller => vcc, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => rightIn, inp => mux2Out,
+	mux2: h2InMux port map(w0 => mux4Out, w1 => "00000000", en => pLoadD, y => mux2Out);
+	
+	Display: eightBitRightShift PORT MAP(controller => vcc, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => LRhigh, inp => mux2Out,
 													output0 => led(0), output1 => led(1), output2 => led(2), output3 => led(3), output4 => led(4),
 													output5 => led(5), output6 => led(6), output7 => led(7), NOToutput => open);
 	

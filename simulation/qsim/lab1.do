@@ -1,10 +1,10 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work lab1.vo
-vlog -work work testingLeftShift.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.eightBitLeftShift_vlg_vec_tst -voptargs="+acc"
+vlog -work work testingDatapath.vwf.vt
+vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.datapath_vlg_vec_tst -voptargs="+acc"
 vcd file -direction lab1.msim.vcd
-vcd add -internal eightBitLeftShift_vlg_vec_tst/*
-vcd add -internal eightBitLeftShift_vlg_vec_tst/i1/*
+vcd add -internal datapath_vlg_vec_tst/*
+vcd add -internal datapath_vlg_vec_tst/i1/*
 run -all
 quit -f

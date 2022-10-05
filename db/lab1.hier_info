@@ -1,34 +1,19 @@
 |datapath
+leftIn => LRhigh.IN0
+leftIn => eightBitLeftShift:LMASK.enable
 leftIn => fourMux:mux4.s0
-rightIn => eightBitLeftShift:LMASK.enable
+rightIn => LRhigh.IN1
 rightIn => eightBitRightShift:RMASK.enable
 rightIn => fourMux:mux4.s1
-rightIn => eightBitRightShift:Display.enable
 g_clk => eightBitLeftShift:LMASK.clk
 g_clk => eightBitRightShift:RMASK.clk
 g_clk => eightBitRightShift:Display.clk
 globalRes => eightBitLeftShift:LMASK.reset
 globalRes => eightBitRightShift:RMASK.reset
 globalRes => eightBitRightShift:Display.reset
-lCont => eightBitRightShift:RMASK.controller
-rCont => eightBitLeftShift:LMASK.controller
-pLoadR[0] => eightBitRightShift:RMASK.inp[0]
-pLoadR[1] => eightBitRightShift:RMASK.inp[1]
-pLoadR[2] => eightBitRightShift:RMASK.inp[2]
-pLoadR[3] => eightBitRightShift:RMASK.inp[3]
-pLoadR[4] => eightBitRightShift:RMASK.inp[4]
-pLoadR[5] => eightBitRightShift:RMASK.inp[5]
-pLoadR[6] => eightBitRightShift:RMASK.inp[6]
-pLoadR[7] => eightBitRightShift:RMASK.inp[7]
-pLoadL[0] => eightBitLeftShift:LMASK.inp[0]
-pLoadL[1] => eightBitLeftShift:LMASK.inp[1]
-pLoadL[2] => eightBitLeftShift:LMASK.inp[2]
-pLoadL[3] => eightBitLeftShift:LMASK.inp[3]
-pLoadL[4] => eightBitLeftShift:LMASK.inp[4]
-pLoadL[5] => eightBitLeftShift:LMASK.inp[5]
-pLoadL[6] => eightBitLeftShift:LMASK.inp[6]
-pLoadL[7] => eightBitLeftShift:LMASK.inp[7]
 pLoadD => h2InMux:mux2.en
+pLoadL => eightBitLeftShift:LMASK.controller
+pLoadR => eightBitRightShift:RMASK.controller
 led[0] <= eightBitRightShift:Display.output0
 led[1] <= eightBitRightShift:Display.output1
 led[2] <= eightBitRightShift:Display.output2
@@ -319,41 +304,6 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|h2InMux:mux2
-w0[0] => y.DATAA
-w0[1] => y.DATAA
-w0[2] => y.DATAA
-w0[3] => y.DATAA
-w0[4] => y.DATAA
-w0[5] => y.DATAA
-w0[6] => y.DATAA
-w0[7] => y.DATAA
-w1[0] => y.DATAB
-w1[1] => y.DATAB
-w1[2] => y.DATAB
-w1[3] => y.DATAB
-w1[4] => y.DATAB
-w1[5] => y.DATAB
-w1[6] => y.DATAB
-w1[7] => y.DATAB
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-en => y.OUTPUTSELECT
-y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |datapath|fourMux:mux4
 uw0[0] => h2InMux:twoIN0.w0[0]
 uw0[1] => h2InMux:twoIN0.w0[1]
@@ -471,6 +421,41 @@ y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |datapath|fourMux:mux4|h2InMux:twoIN2
+w0[0] => y.DATAA
+w0[1] => y.DATAA
+w0[2] => y.DATAA
+w0[3] => y.DATAA
+w0[4] => y.DATAA
+w0[5] => y.DATAA
+w0[6] => y.DATAA
+w0[7] => y.DATAA
+w1[0] => y.DATAB
+w1[1] => y.DATAB
+w1[2] => y.DATAB
+w1[3] => y.DATAB
+w1[4] => y.DATAB
+w1[5] => y.DATAB
+w1[6] => y.DATAB
+w1[7] => y.DATAB
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|h2InMux:mux2
 w0[0] => y.DATAA
 w0[1] => y.DATAA
 w0[2] => y.DATAA

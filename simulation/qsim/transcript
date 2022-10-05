@@ -2,24 +2,24 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module eightBitLeftShift
+# -- Compiling module datapath
 # 
 # Top level modules:
-# 	eightBitLeftShift
+# 	datapath
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module eightBitLeftShift_vlg_sample_tst
-# -- Compiling module eightBitLeftShift_vlg_check_tst
-# -- Compiling module eightBitLeftShift_vlg_vec_tst
+# -- Compiling module datapath_vlg_sample_tst
+# -- Compiling module datapath_vlg_check_tst
+# -- Compiling module datapath_vlg_vec_tst
 # 
 # Top level modules:
-# 	eightBitLeftShift_vlg_vec_tst
-# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.eightBitLeftShift_vlg_vec_tst 
-# Loading work.eightBitLeftShift_vlg_vec_tst
-# Loading work.eightBitLeftShift
+# 	datapath_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.datapath_vlg_vec_tst 
+# Loading work.datapath_vlg_vec_tst
+# Loading work.datapath
 # Loading altera_ver.dffeas
-# Loading work.eightBitLeftShift_vlg_sample_tst
-# Loading work.eightBitLeftShift_vlg_check_tst
+# Loading work.datapath_vlg_sample_tst
+# Loading work.datapath_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : testingLeftShift.vwf.vt(499)
-#    Time: 20 ns  Iteration: 0  Instance: /eightBitLeftShift_vlg_vec_tst/tb_out
+# ** Note: $finish    : testingDatapath.vwf.vt(285)
+#    Time: 20 ns  Iteration: 0  Instance: /datapath_vlg_vec_tst/tb_out

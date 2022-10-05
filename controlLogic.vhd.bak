@@ -1,0 +1,43 @@
+library ieee;
+use std_logic_1164.all;
+
+entity controlLogic is
+	port(leftIn, rightIn: in std_logic;
+			clk: in std_logic;
+			S: out std_logic_vector(4 downto 0);
+			something: out std_logic);
+end controlLogic;
+
+architecture structControl of controlLogic is
+
+	component enardFF_2
+		port(i_resetBar	: IN	STD_LOGIC;
+		i_d		: IN	STD_LOGIC;
+		i_enable	: IN	STD_LOGIC;
+		i_clock		: IN	STD_LOGIC;
+		o_q, o_qBar	: OUT	STD_LOGIC);
+	end component;
+	
+	signal pLoadD, reset, NOTreset, state: std_logic;
+	signal sIn: std_logic_vector(4 downto 0);
+	signal output: std_logic_vector(4 downto 0);
+	
+	
+	begin
+	
+	state <= someStuff;
+	NOTreset <= NOT(reset);
+	
+	state0: enardFF_2(i_resetBar => , i_d => , i_enable => , i_clock => , o_q => output(0), o_qBar => open);
+	
+	state1: enardFF_2(i_resetBar => , i_d => , i_enable => , i_clock => , o_q => output(1), o_qBar => open);
+	
+	state2: enardFF_2(i_resetBar => , i_d => , i_enable => , i_clock => , o_q => output(2), o_qBar => open);
+	
+	state3: enardFF_2(i_resetBar => , i_d => , i_enable => , i_clock => , o_q => output(3), o_qBar => open);
+	
+	state4: enardFF_2(i_resetBar => , i_d => , i_enable => , i_clock => , o_q => output(4), o_qBar => open);
+	
+	
+
+end structControl;

@@ -3,56 +3,132 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
+vdatapath
+Ikl^OKVc=iIR4d3i4655j10
+VL8d361?gMf`@`KPdUfLEo1
+Z1 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
+w1664968374
+Z2 8lab1.vo
+Z3 Flab1.vo
+L0 31
+Z4 OV;L;10.1d;51
+r1
+31
+Z5 !s90 -work|work|lab1.vo|
+Z6 o-work work -O0
+!i10b 1
+!s100 lU9MXPZVKEKCHFDeT2a7k2
+!s85 0
+!s108 1664968375.464000
+Z7 !s107 lab1.vo|
+!s101 -O0
+vdatapath_vlg_check_tst
+!i10b 1
+!s100 _W;KC`6^RQZ^P`g@FVlWn2
+IHUI[McLP:<4c[iLobh;K92
+V:C:FFc>mG:G6]Oz>Zie?P0
+R1
+Z8 w1664968373
+Z9 8testingDatapath.vwf.vt
+Z10 FtestingDatapath.vwf.vt
+L0 69
+R4
+r1
+!s85 0
+31
+Z11 !s108 1664968375.533000
+Z12 !s107 testingDatapath.vwf.vt|
+Z13 !s90 -work|work|testingDatapath.vwf.vt|
+!s101 -O0
+R6
+vdatapath_vlg_sample_tst
+!i10b 1
+!s100 :gB7:l7XNJdH;3[PCH:8E1
+IFLZ@8?k7`gQgAEl5Hz1KM2
+VMMGkcHh1Hzh=OXda?lJL52
+R1
+R8
+R9
+R10
+L0 29
+R4
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+R6
+vdatapath_vlg_vec_tst
+!i10b 1
+!s100 P<:iAO9TIjBiBDe0G`_Qm1
+IT;G4gaZKTb`o=Nd6QjI4C1
+V^@Kb0LjGY<clOm@lcHMDA1
+R1
+R8
+R9
+R10
+L0 289
+R4
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+R6
 Eeightbitadder
-Z1 w1664650660
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\grobb\Documents\University\Digital_Systems\Labs\Lab_1\VHDL\lab1\simulation\qsim
-Z5 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd
-Z6 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd
+Z14 w1664650660
+Z15 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z16 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R1
+Z17 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd
+Z18 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd
 l0
 L31
 VJJlFEgmEJ`JAIoIN9dg:90
-Z7 OV;C;10.1d;51
+Z19 OV;C;10.1d;51
 31
-Z8 !s108 1664825792.341000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd|
-Z10 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd|
-Z11 o-93 -work work -O0
-Z12 tExplicit 1
+Z20 !s108 1664825792.341000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd|
+Z22 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightbitadder.vhd|
+Z23 o-93 -work work -O0
+Z24 tExplicit 1
 !s100 Gm_<<nz:URaBVY76MI97m1
 !i10b 1
 Artl
-R2
-R3
+R15
+R16
 DEx4 work 13 eightbitadder 0 22 JJlFEgmEJ`JAIoIN9dg:90
 l49
 L38
 V60N3=PIggTV80l:So?kOm2
-R7
+R19
 31
-R8
-R9
-R10
-R11
-R12
+R20
+R21
+R22
+R23
+R24
 !s100 MR6g6JXmoZDFZK_Ci03lA1
 !i10b 1
 veightBitAdder
 I4zg@2Yb]:Gh5fBcJ6TPc11
 V>8`Xi78[2id@@ha>XUWPi0
-R4
+R1
 w1664826384
-Z13 8lab1.vo
-Z14 Flab1.vo
+R2
+R3
 L0 31
-Z15 OV;L;10.1d;51
+R4
 r1
 31
-Z16 !s90 -work|work|lab1.vo|
-Z17 o-work work -O0
+R5
+R6
 neight@bit@adder
-Z18 !s107 lab1.vo|
+R7
 !i10b 1
 !s100 [k1ezg1Q1ZaORkB6^R;Rf1
 !s85 0
@@ -61,18 +137,18 @@ Z18 !s107 lab1.vo|
 veightBitAdder_vlg_vec_tst
 IG9@d`HibImQXci5O;f4Vf0
 V37WakHQoWj=dFIR5cUIXP2
-R4
+R1
 w1664826382
-Z19 8testingShift.vwf.vt
-Z20 FtestingShift.vwf.vt
+Z25 8testingShift.vwf.vt
+Z26 FtestingShift.vwf.vt
 L0 29
-R15
+R4
 r1
 31
-R17
+R6
 neight@bit@adder_vlg_vec_tst
-Z21 !s90 -work|work|testingShift.vwf.vt|
-Z22 !s107 testingShift.vwf.vt|
+Z27 !s90 -work|work|testingShift.vwf.vt|
+Z28 !s107 testingShift.vwf.vt|
 !i10b 1
 !s100 o?H2zG:S2L1eQZMlz8HXh0
 !s85 0
@@ -81,177 +157,177 @@ Z22 !s107 testingShift.vwf.vt|
 veightBitLeftShift
 IXV<GK]8Cbf<i^]Y3_elG;2
 Vk1Jkzo9<SzfOe>66:b7nb0
-R4
-w1664917033
-R13
-R14
+R1
+w1664942234
+R2
+R3
 L0 31
-R15
+R4
 r1
 31
-R16
-R17
+R5
+R6
 neight@bit@left@shift
+R7
 !i10b 1
 !s100 >1UR7zO`Ohb4>?RAID69l3
 !s85 0
-!s108 1664917034.201000
-R18
+!s108 1664942235.084000
 !s101 -O0
 veightBitLeftShift_vlg_check_tst
-!i10b 1
-!s100 ]zcZDdm<55nL]B9YS]Jc_1
-Ib?[Q?76U8n6NN01nHDhQL0
+Ik4=M7>N1hjDJ`N=ecboDh1
 V;BKi[Y3zbB>lM7WE<LfB]0
-R4
-Z23 w1664917030
-Z24 8testingLeftShift.vwf.vt
-Z25 FtestingLeftShift.vwf.vt
+R1
+Z29 w1664942232
+Z30 8testingLeftShift.vwf.vt
+Z31 FtestingLeftShift.vwf.vt
 L0 67
-R15
+R4
 r1
-!s85 0
 31
-Z26 !s108 1664917034.326000
-Z27 !s107 testingLeftShift.vwf.vt|
-Z28 !s90 -work|work|testingLeftShift.vwf.vt|
-!s101 -O0
-R17
+Z32 !s108 1664942235.165000
+Z33 !s107 testingLeftShift.vwf.vt|
+Z34 !s90 -work|work|testingLeftShift.vwf.vt|
+R6
 neight@bit@left@shift_vlg_check_tst
-veightBitLeftShift_vlg_sample_tst
 !i10b 1
-!s100 j3S7DT_Sg@RgWG@;Cah:e0
+!s100 eTA32Hoomc8nhm<kRd<m30
+!s85 0
+!s101 -O0
+veightBitLeftShift_vlg_sample_tst
 I:bn5c_FIHU_daVKRGeFWY2
 VZCChBSCnh6;h7Xd2<:;P>0
-R4
-R23
-R24
-R25
+R1
+R29
+R30
+R31
 L0 29
-R15
+R4
 r1
-!s85 0
 31
-R26
-R27
-R28
-!s101 -O0
-R17
+R32
+R33
+R34
+R6
 neight@bit@left@shift_vlg_sample_tst
-veightBitLeftShift_vlg_vec_tst
 !i10b 1
-!s100 31YYaCd>P>i8N7<[161C`0
-I^6CWjS>OOKc3W3aY1zD9a1
-VB[;Q_d>X]gejK3gc]U]<a0
-R4
-R23
-R24
-R25
-Z29 L0 503
-R15
-r1
+!s100 j3S7DT_Sg@RgWG@;Cah:e0
 !s85 0
-31
-R26
-R27
-R28
 !s101 -O0
-R17
-neight@bit@left@shift_vlg_vec_tst
-veightBitRightShift
-I_Ph9M1zHG^YjN_;@iGcka3
-V7OL9d3=HOCj94E2ZX6zbM0
+veightBitLeftShift_vlg_vec_tst
+I34dd?I^gch7FS>;o23<4o2
+VB[;Q_d>X]gejK3gc]U]<a0
+R1
+R29
+R30
+R31
+Z35 L0 503
 R4
-w1664896905
-R13
-R14
-L0 31
-R15
 r1
 31
-R16
-R17
-neight@bit@right@shift
-R18
+R32
+R33
+R34
+R6
+neight@bit@left@shift_vlg_vec_tst
 !i10b 1
-!s100 ]03lli2kjzfQj`Im:^Y4n0
+!s100 2C0UhAhBVDO>KdKmI_A7R0
 !s85 0
-!s108 1664896906.569000
+!s101 -O0
+veightBitRightShift
+Ie8L0zC>ie<]glTV=XG69Y3
+VV2=1>k8bHNhMGbibE8LI:2
+R1
+w1664941904
+R2
+R3
+L0 31
+R4
+r1
+31
+R5
+R6
+neight@bit@right@shift
+R7
+!i10b 1
+!s100 m04K3EoFN4d]a0DS2e=XT2
+!s85 0
+!s108 1664941905.428000
 !s101 -O0
 veightBitRightShift_vlg_check_tst
-IU?S<;lU;V[JWUjPe2[z<z0
+IzPOa;>0WHaOV_fHk0gA7Q0
 VTk<WLlIHlGT<eBBW0YgTI1
-R4
-Z30 w1664896529
-Z31 8testingRightShift.vwf.vt
-Z32 FtestingRightShift.vwf.vt
+R1
+Z36 w1664941902
+Z37 8testingRightShift.vwf.vt
+Z38 FtestingRightShift.vwf.vt
 L0 67
-R15
+R4
 r1
 31
-Z33 !s108 1664896532.038000
-Z34 !s107 testingRightShift.vwf.vt|
-Z35 !s90 -work|work|testingRightShift.vwf.vt|
-R17
+Z39 !s108 1664941905.508000
+Z40 !s107 testingRightShift.vwf.vt|
+Z41 !s90 -work|work|testingRightShift.vwf.vt|
+R6
 neight@bit@right@shift_vlg_check_tst
 !i10b 1
-!s100 miD;bHz2[j2X7PL@mBC[[3
+!s100 WkRgK4Q?<OX:oMo[Y:dYA0
 !s85 0
 !s101 -O0
 veightBitRightShift_vlg_sample_tst
 I@AW@Sg?;5c5K;hkAa4dWY0
 Vo[WjNBQKgHlVUH>jkRMRT3
-R4
-w1664896903
-R31
-R32
+R1
+R36
+R37
+R38
 L0 29
-R15
+R4
 r1
 31
-R35
-R17
+R39
+R40
+R41
+R6
 neight@bit@right@shift_vlg_sample_tst
-R34
 !i10b 1
 !s100 YEWZ_HK_hGR[K_c:ESdX31
 !s85 0
-!s108 1664896906.649000
 !s101 -O0
 veightBitRightShift_vlg_vec_tst
-IR[CP][dUVD_`XgzQ3KIYY2
+ILcjhKD709=i[SZ41UVDT70
 Velegk[>LEh8[TlaT>HClX0
+R1
+R36
+R37
+R38
+R35
 R4
-R30
-R31
-R32
-R29
-R15
 r1
 31
-R33
-R34
-R35
-R17
+R39
+R40
+R41
+R6
 neight@bit@right@shift_vlg_vec_tst
 !i10b 1
-!s100 c>O6b]Fe2iT_]ch=jd>m[3
+!s100 h^S_nL[AXL^k^`2RQIZ9J2
 !s85 0
 !s101 -O0
 veightbitshiftregister
 IJG>SWTUDTg_1PbZ<SojHA3
 VkCUGnK=m>?UHI8cafMInh2
-R4
+R1
 w1664888849
-R13
-R14
+R2
+R3
 L0 31
-R15
+R4
 r1
 31
-R16
-R17
-R18
+R5
+R6
+R7
 !i10b 1
 !s100 aW1cPBCN747zh0fHZDCn`0
 !s85 0
@@ -260,18 +336,18 @@ R18
 veightbitshiftregister_vlg_check_tst
 ILRTl^]0;imfE_Y;AagROP0
 Vkm=LWgZ0gai^RdC9zi<<`3
-R4
-Z36 w1664887926
-R19
-R20
+R1
+Z42 w1664887926
+R25
+R26
 L0 67
-R15
+R4
 r1
 31
-Z37 !s108 1664887929.645000
-R22
-R21
-R17
+Z43 !s108 1664887929.645000
+R28
+R27
+R6
 !i10b 1
 !s100 g<i40Y`>0VK;>jb?25OF40
 !s85 0
@@ -279,18 +355,18 @@ R17
 veightbitshiftregister_vlg_sample_tst
 INhZ@G98n9IFZ;8KiL0lUQ2
 Vg;:_26P`:UmMCLo@RfZIM1
-R4
-R36
-R19
-R20
+R1
+R42
+R25
+R26
 L0 29
-R15
+R4
 r1
 31
-R37
-R22
-R21
-R17
+R43
+R28
+R27
+R6
 !i10b 1
 !s100 oo>>dJ?BfMKznUB`e7U`b2
 !s85 0
@@ -298,17 +374,17 @@ R17
 veightbitshiftregister_vlg_vec_tst
 I=HT?f0?RFACZP[B>HcNLi2
 VcOC9QP??Z?ZhW4FM4NdRA3
-R4
+R1
 w1664888847
-R24
-R25
+R30
+R31
 L0 29
-R15
+R4
 r1
 31
-R28
-R17
-!s107 testingLeftShift.vwf.vt|
+R34
+R6
+R33
 !i10b 1
 !s100 3]0lMOK9fZ8EfH1@A=__12
 !s85 0
@@ -316,19 +392,19 @@ R17
 !s101 -O0
 venARdFF_2
 IbbB82jeQ2B]n?1FM0T<BH1
-Z38 VU9@<El_UX9ibjHjgB_7Rg2
-R4
+Z44 VU9@<El_UX9ibjHjgB_7Rg2
+R1
 w1664847052
-R13
-R14
+R2
+R3
 L0 31
-R15
+R4
 r1
 31
-R16
-R17
-Z39 nen@a@rd@f@f_2
-R18
+R5
+R6
+Z45 nen@a@rd@f@f_2
+R7
 !i10b 1
 !s100 4hXm_Pe]4jMm@KK>TZV@;0
 !s85 0
@@ -336,134 +412,214 @@ R18
 !s101 -O0
 venARdFF_2_vlg_check_tst
 IQjem9G0c]FHz6?CDDiHG33
-Z40 VYjfgT_S0?OXMg[?eRnW3]3
-R4
-Z41 w1664847049
-Z42 8testingFF.vwf.vt
-Z43 FtestingFF.vwf.vt
+Z46 VYjfgT_S0?OXMg[?eRnW3]3
+R1
+Z47 w1664847049
+Z48 8testingFF.vwf.vt
+Z49 FtestingFF.vwf.vt
 L0 63
-R15
+R4
 r1
 31
-Z44 !s108 1664847053.387000
-Z45 !s107 testingFF.vwf.vt|
-Z46 !s90 -work|work|testingFF.vwf.vt|
-R17
-Z47 nen@a@rd@f@f_2_vlg_check_tst
+Z50 !s108 1664847053.387000
+Z51 !s107 testingFF.vwf.vt|
+Z52 !s90 -work|work|testingFF.vwf.vt|
+R6
+Z53 nen@a@rd@f@f_2_vlg_check_tst
 !i10b 1
 !s100 7^P4aVPbLa285Sc;oM4@V2
 !s85 0
 !s101 -O0
 venARdFF_2_vlg_sample_tst
 IEWhLWTRYzDgg@=NP_4_3Q2
-Z48 VfmkZO5eKLdI[e8>:];40^0
-R4
-R41
-R42
-R43
+Z54 VfmkZO5eKLdI[e8>:];40^0
+R1
+R47
+R48
+R49
 L0 29
-R15
+R4
 r1
 31
-R44
-R45
-R46
-R17
-Z49 nen@a@rd@f@f_2_vlg_sample_tst
+R50
+R51
+R52
+R6
+Z55 nen@a@rd@f@f_2_vlg_sample_tst
 !i10b 1
 !s100 Y5kO0=>B0oTlKehb>e<S?0
 !s85 0
 !s101 -O0
 venARdFF_2_vlg_vec_tst
 IHGM]Qj=@cPZhTTI3WNVj93
-Z50 V@[TdaAjfCA?1aH^^^7Rck2
+Z56 V@[TdaAjfCA?1aH^^^7Rck2
+R1
+R47
+R48
+R49
+Z57 L0 185
 R4
-R41
-R42
-R43
-Z51 L0 185
-R15
 r1
 31
-R44
-R45
-R46
-R17
-Z52 nen@a@rd@f@f_2_vlg_vec_tst
+R50
+R51
+R52
+R6
+Z58 nen@a@rd@f@f_2_vlg_vec_tst
 !i10b 1
 !s100 @Q`K:3Og<9Tz9[LLH;mT83
+!s85 0
+!s101 -O0
+vfourMux
+IKJ45D4iom7z4g8H42Tfe_2
+V?g>5jH^7KzBkm0TUF1BA51
+R1
+w1664941379
+R2
+R3
+L0 31
+R4
+r1
+31
+R5
+R6
+nfour@mux
+R7
+!i10b 1
+!s100 k^<_DaAeMY8RSS<bcJ]QD2
+!s85 0
+!s108 1664941380.485000
+!s101 -O0
+vfourMux_vlg_check_tst
+IBaI_@Y^ffHZb[o3`MKOk[2
+Va35iARPE=[THQ8>AL2a:W2
+R1
+Z59 w1664941377
+Z60 8testing4InMUX.vwf.vt
+Z61 Ftesting4InMUX.vwf.vt
+L0 67
+R4
+r1
+31
+Z62 !s108 1664941380.568000
+Z63 !s107 testing4InMUX.vwf.vt|
+Z64 !s90 -work|work|testing4InMUX.vwf.vt|
+R6
+nfour@mux_vlg_check_tst
+!i10b 1
+!s100 Y@C6Z5QF8eBbedFd>Z[<O1
+!s85 0
+!s101 -O0
+vfourMux_vlg_sample_tst
+IO]TlGQ0H:mdIhU;ziXQ]73
+Vi3Yo:PmZXbfe=W::m>OH=1
+R1
+R59
+R60
+R61
+L0 29
+R4
+r1
+31
+R62
+R63
+R64
+R6
+nfour@mux_vlg_sample_tst
+!i10b 1
+!s100 OlJ7S_cXaa0z9eV4Eo?VD0
+!s85 0
+!s101 -O0
+vfourMux_vlg_vec_tst
+I]Q6O0l?GR1:zL7?mP<d>j1
+VQ;TV7[0VhZC5>H2dfAI]B1
+R1
+R59
+R60
+R61
+L0 287
+R4
+r1
+31
+R62
+R63
+R64
+R6
+nfour@mux_vlg_vec_tst
+!i10b 1
+!s100 5Q2l5KSYAdFZV<6W]QAI?3
 !s85 0
 !s101 -O0
 vh2InMux
 I9LW^lJ9I:L?53g081SEBC0
 VS^YHjmHRnIM<_c:^VH`FZ3
-R4
-w1664828654
-R13
-R14
+R1
+w1664941057
+R2
+R3
 L0 31
-R15
+R4
 r1
 31
-R16
-R17
+R5
+R6
 nh2@in@mux
-R18
+R7
 !i10b 1
 !s100 1oaGRB826l@5V>?_o3AUe0
 !s85 0
-!s108 1664828655.290000
+!s108 1664941058.642000
 !s101 -O0
 Eh2inmux_tb
-Z53 w1664825645
-R2
-R3
-R4
-Z54 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd
-Z55 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd
+Z65 w1664825645
+R15
+R16
+R1
+Z66 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd
+Z67 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd
 l0
 L4
 VORc<S5Ff7QbGcM20faFWY1
-R7
+R19
 31
-Z56 !s108 1664825792.500000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd|
-Z58 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd|
-R11
-R12
-Z59 !s100 C5Nj5?4X`gGF9hc>j8V?B1
+Z68 !s108 1664825792.500000
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd|
+Z70 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/h2InMux_tb.vhd|
+R23
+R24
+Z71 !s100 C5Nj5?4X`gGF9hc>j8V?B1
 !i10b 1
 Atwointest
-R2
-R3
+R15
+R16
 DEx4 work 10 h2inmux_tb 0 22 ORc<S5Ff7QbGcM20faFWY1
 l21
 L7
 VQG:6L>K:ceO23cU?hlBRk1
-R7
+R19
 31
-R56
-R57
-R58
-R11
-R12
+R68
+R69
+R70
+R23
+R24
 !s100 a2hFz_SPlRBdfMJW[P6P_2
 !i10b 1
 vh2InMux_vlg_check_tst
 Ih=dH_nU>0QGNS>DbBlP4f2
 V4mn=MUDnRN=djT^I8QXEJ1
-R4
-Z60 w1664828653
-Z61 8testing2InMUX.vwf.vt
-Z62 Ftesting2InMUX.vwf.vt
+R1
+Z72 w1664941056
+Z73 8testing2InMUX.vwf.vt
+Z74 Ftesting2InMUX.vwf.vt
 L0 61
-R15
+R4
 r1
 31
-Z63 !s108 1664828655.355000
-Z64 !s107 testing2InMUX.vwf.vt|
-Z65 !s90 -work|work|testing2InMUX.vwf.vt|
-R17
+Z75 !s108 1664941058.728000
+Z76 !s107 testing2InMUX.vwf.vt|
+Z77 !s90 -work|work|testing2InMUX.vwf.vt|
+R6
 nh2@in@mux_vlg_check_tst
 !i10b 1
 !s100 jXcbJl7PV;ho0I^nfo5h32
@@ -472,18 +628,18 @@ nh2@in@mux_vlg_check_tst
 vh2InMux_vlg_sample_tst
 I^a4a`cV<c5[D]AmSLI?J31
 V1^5IdZVID>[74IKFW3kH@0
-R4
-R60
-R61
-R62
+R1
+R72
+R73
+R74
 L0 29
-R15
+R4
 r1
 31
-R63
-R64
-R65
-R17
+R75
+R76
+R77
+R6
 nh2@in@mux_vlg_sample_tst
 !i10b 1
 !s100 OZe7XA=IlfZlPA`3^kh`<0
@@ -492,18 +648,18 @@ nh2@in@mux_vlg_sample_tst
 vh2InMux_vlg_vec_tst
 I>@[Y4MNET4FmczW2cK>;C1
 VY>`HENUNmHS8Dm=jjlDMQ2
-R4
-R60
-R61
-R62
+R1
+R72
+R73
+R74
 L0 281
-R15
+R4
 r1
 31
-R63
-R64
-R65
-R17
+R75
+R76
+R77
+R6
 nh2@in@mux_vlg_vec_tst
 !i10b 1
 !s100 _?iSF?B4]F1Z6T_1j<z<51
@@ -512,17 +668,17 @@ nh2@in@mux_vlg_vec_tst
 vlab1
 IT:c6]TkSGh2i=fTLF:kd]0
 VF^<Bl_E=`<fB>^IEzFZP;2
-R4
+R1
 w1664850903
-R13
-R14
+R2
+R3
 L0 31
-R15
+R4
 r1
 31
-R16
-R17
-R18
+R5
+R6
+R7
 !i10b 1
 !s100 OADE9?nB[S_FfB8UYA9P62
 !s85 0
@@ -531,18 +687,18 @@ R18
 vlab1_vlg_check_tst
 Ij5eEg_KBc:``XzmX:2jXg3
 VnmJ6UUj3QRCZFQb27m>K[2
-R4
-Z66 w1664850901
-R31
-R32
+R1
+Z78 w1664850901
+R37
+R38
 L0 81
-R15
+R4
 r1
 31
-Z67 !s108 1664850904.379000
-R34
-R35
-R17
+Z79 !s108 1664850904.379000
+R40
+R41
+R6
 !i10b 1
 !s100 l7KKggb:fd_FYe;Fab5^W1
 !s85 0
@@ -550,18 +706,18 @@ R17
 vlab1_vlg_sample_tst
 I1Y?Y_^6n<TQ`?PDihkGEJ2
 V5AGL5JkTQeg;IZ5??l7CO3
-R4
-R66
-R31
-R32
+R1
+R78
+R37
+R38
 L0 29
-R15
+R4
 r1
 31
-R67
-R34
-R35
-R17
+R79
+R40
+R41
+R6
 !i10b 1
 !s100 C7X8K0]AV=MmJJKD2Dka:1
 !s85 0
@@ -569,54 +725,54 @@ R17
 vlab1_vlg_vec_tst
 Im1z9JkbYcelJ?fFZS@^lO3
 VPbAMk81@?Q^0S[F;U`DUN3
-R4
-R66
-R31
-R32
+R1
+R78
+R37
+R38
 L0 581
-R15
+R4
 r1
 31
-R67
-R34
-R35
-R17
+R79
+R40
+R41
+R6
 !i10b 1
 !s100 gU^:7QVelfei2C:GWLTOd2
 !s85 0
 !s101 -O0
 Eonebitadder
-Z68 w1664390644
-R2
-R3
-R4
-Z69 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd
-Z70 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd
+Z80 w1664390644
+R15
+R16
+R1
+Z81 8C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd
+Z82 FC:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd
 l0
 L31
 VZaXom[;>1EeTV6BDDARb81
-R7
+R19
 31
-Z71 !s108 1664825792.419000
-Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd|
-Z73 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd|
-R11
-R12
+Z83 !s108 1664825792.419000
+Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd|
+Z85 !s107 C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/onebitadder.vhd|
+R23
+R24
 !s100 3=]2afhWa=ab9Iz_HFcb00
 !i10b 1
 Artl
-R2
-R3
+R15
+R16
 DEx4 work 11 onebitadder 0 22 ZaXom[;>1EeTV6BDDARb81
 l41
 L38
 VWK19MCHP3ja`n:W4K2NK62
-R7
+R19
 31
-R71
-R72
-R73
-R11
-R12
+R83
+R84
+R85
+R23
+R24
 !s100 RRbEGVI`EKl=XLGnQ:<dQ0
 !i10b 1
