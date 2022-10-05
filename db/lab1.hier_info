@@ -14,14 +14,14 @@ globalRes => eightBitRightShift:Display.reset
 pLoadD => h2InMux:mux2.en
 pLoadL => eightBitLeftShift:LMASK.controller
 pLoadR => eightBitRightShift:RMASK.controller
-led[0] <= eightBitRightShift:Display.output0
-led[1] <= eightBitRightShift:Display.output1
-led[2] <= eightBitRightShift:Display.output2
-led[3] <= eightBitRightShift:Display.output3
-led[4] <= eightBitRightShift:Display.output4
-led[5] <= eightBitRightShift:Display.output5
-led[6] <= eightBitRightShift:Display.output6
-led[7] <= eightBitRightShift:Display.output7
+led[0] << eightBitRightShift:Display.output0
+led[1] << eightBitRightShift:Display.output1
+led[2] << eightBitRightShift:Display.output2
+led[3] << eightBitRightShift:Display.output3
+led[4] << eightBitRightShift:Display.output4
+led[5] << eightBitRightShift:Display.output5
+led[6] << eightBitRightShift:Display.output6
+led[7] << eightBitRightShift:Display.output7
 
 
 |datapath|eightBitLeftShift:LMASK

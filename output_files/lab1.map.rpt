@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab1
-Wed Oct 05 00:23:54 2022
+Wed Oct 05 07:18:02 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -47,7 +47,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 05 00:23:54 2022      ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 05 07:18:02 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; lab1                                       ;
 ; Top-level Entity Name           ; datapath                                   ;
@@ -330,7 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -340,7 +340,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Oct 05 00:23:52 2022
+    Info: Processing started: Wed Oct 05 07:18:00 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
@@ -378,7 +378,7 @@ Info (21057): Implemented 41 device resources after synthesis - the final resour
     Info (21061): Implemented 26 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Wed Oct 05 00:23:54 2022
+    Info: Processing ended: Wed Oct 05 07:18:02 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

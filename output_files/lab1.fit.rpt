@@ -1,5 +1,5 @@
 Fitter report for lab1
-Wed Oct 05 00:24:28 2022
+Wed Oct 05 07:18:36 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Oct 05 00:24:28 2022      ;
+; Fitter Status                   ; Successful - Wed Oct 05 07:18:36 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; lab1                                       ;
 ; Top-level Entity Name           ; datapath                                   ;
@@ -150,14 +150,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 2.97        ;
+; Average used               ; 3.38        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  22.6%      ;
-;     Processors 5-8         ;  19.4%      ;
-;     Processors 9-12        ;  12.9%      ;
+;     Processors 2-8         ;  25.0%      ;
+;     Processors 9-12        ;  15.6%      ;
 +----------------------------+-------------+
 
 
@@ -1406,17 +1405,17 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.80 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.66 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/output_files/lab1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6658 megabytes
-    Info: Processing ended: Wed Oct 05 00:24:28 2022
-    Info: Elapsed time: 00:00:32
+    Info: Peak virtual memory: 6660 megabytes
+    Info: Processing ended: Wed Oct 05 07:18:36 2022
+    Info: Elapsed time: 00:00:33
     Info: Total CPU time (on all processors): 00:01:06
 
 
