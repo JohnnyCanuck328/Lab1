@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/04/2022 23:42:57"
+// Generated on "10/05/2022 13:13:48"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    fourMux
 // 
@@ -340,16 +340,14 @@ end
 // uw0[ 5 ]
 initial
 begin
-	uw0[5] = 1'b0;
-	uw0[5] = #2000 1'b1;
-	uw0[5] = #2000 1'b0;
+	uw0[5] = 1'b1;
+	uw0[5] = #6000 1'b0;
 end 
 // uw0[ 4 ]
 initial
 begin
-	uw0[4] = 1'b0;
-	uw0[4] = #2000 1'b1;
-	uw0[4] = #2000 1'b0;
+	uw0[4] = 1'b1;
+	uw0[4] = #6000 1'b0;
 end 
 // uw0[ 3 ]
 initial
@@ -365,8 +363,6 @@ end
 initial
 begin
 	uw0[1] = 1'b0;
-	uw0[1] = #4000 1'b1;
-	uw0[1] = #2000 1'b0;
 end 
 // uw0[ 0 ]
 initial
@@ -378,120 +374,98 @@ initial
 begin
 	uw1[7] = 1'b1;
 	uw1[7] = #2000 1'b0;
-	uw1[7] = #6000 1'b1;
-	uw1[7] = #2000 1'b0;
-	uw1[7] = #2000 1'b1;
-	uw1[7] = #2000 1'b0;
+	uw1[7] = #4000 1'b1;
+	uw1[7] = #8000 1'b0;
 end 
 // uw1[ 6 ]
 initial
 begin
 	uw1[6] = 1'b1;
 	uw1[6] = #2000 1'b0;
-	uw1[6] = #6000 1'b1;
-	uw1[6] = #2000 1'b0;
-	uw1[6] = #2000 1'b1;
-	uw1[6] = #2000 1'b0;
+	uw1[6] = #4000 1'b1;
+	uw1[6] = #8000 1'b0;
 end 
 // uw1[ 5 ]
 initial
 begin
 	uw1[5] = 1'b1;
 	uw1[5] = #2000 1'b0;
-	uw1[5] = #6000 1'b1;
-	uw1[5] = #2000 1'b0;
-	uw1[5] = #2000 1'b1;
-	uw1[5] = #2000 1'b0;
+	uw1[5] = #4000 1'b1;
+	uw1[5] = #8000 1'b0;
 end 
 // uw1[ 4 ]
 initial
 begin
 	uw1[4] = 1'b1;
 	uw1[4] = #2000 1'b0;
-	uw1[4] = #6000 1'b1;
-	uw1[4] = #2000 1'b0;
-	uw1[4] = #2000 1'b1;
-	uw1[4] = #2000 1'b0;
+	uw1[4] = #4000 1'b1;
+	uw1[4] = #8000 1'b0;
 end 
 // uw1[ 3 ]
 initial
 begin
 	uw1[3] = 1'b1;
 	uw1[3] = #2000 1'b0;
-	uw1[3] = #6000 1'b1;
-	uw1[3] = #2000 1'b0;
+	uw1[3] = #4000 1'b1;
+	uw1[3] = #8000 1'b0;
 end 
 // uw1[ 2 ]
 initial
 begin
 	uw1[2] = 1'b1;
 	uw1[2] = #2000 1'b0;
-	uw1[2] = #6000 1'b1;
-	uw1[2] = #2000 1'b0;
+	uw1[2] = #4000 1'b1;
+	uw1[2] = #8000 1'b0;
 end 
 // uw1[ 1 ]
 initial
 begin
 	uw1[1] = 1'b1;
 	uw1[1] = #2000 1'b0;
-	uw1[1] = #6000 1'b1;
-	uw1[1] = #2000 1'b0;
+	uw1[1] = #4000 1'b1;
+	uw1[1] = #8000 1'b0;
 end 
 // uw1[ 0 ]
 initial
 begin
 	uw1[0] = 1'b1;
 	uw1[0] = #2000 1'b0;
-	uw1[0] = #6000 1'b1;
-	uw1[0] = #2000 1'b0;
+	uw1[0] = #4000 1'b1;
+	uw1[0] = #8000 1'b0;
 end 
 // uw2[ 7 ]
 initial
 begin
 	uw2[7] = 1'b0;
-	uw2[7] = #20000 1'b1;
-	uw2[7] = #2000 1'b0;
+	uw2[7] = #14000 1'b1;
+	uw2[7] = #8000 1'b0;
 end 
 // uw2[ 6 ]
 initial
 begin
 	uw2[6] = 1'b0;
-	uw2[6] = #20000 1'b1;
-	uw2[6] = #2000 1'b0;
+	uw2[6] = #14000 1'b1;
+	uw2[6] = #8000 1'b0;
 end 
 // uw2[ 5 ]
 initial
 begin
 	uw2[5] = 1'b0;
-	uw2[5] = #14000 1'b1;
-	uw2[5] = #2000 1'b0;
-	uw2[5] = #4000 1'b1;
-	uw2[5] = #2000 1'b0;
 end 
 // uw2[ 4 ]
 initial
 begin
 	uw2[4] = 1'b0;
-	uw2[4] = #16000 1'b1;
-	uw2[4] = #2000 1'b0;
-	uw2[4] = #2000 1'b1;
-	uw2[4] = #2000 1'b0;
 end 
 // uw2[ 3 ]
 initial
 begin
 	uw2[3] = 1'b0;
-	uw2[3] = #16000 1'b1;
-	uw2[3] = #2000 1'b0;
-	uw2[3] = #2000 1'b1;
-	uw2[3] = #2000 1'b0;
 end 
 // uw2[ 2 ]
 initial
 begin
 	uw2[2] = 1'b0;
-	uw2[2] = #16000 1'b1;
-	uw2[2] = #2000 1'b0;
 end 
 // uw2[ 1 ]
 initial
@@ -512,36 +486,36 @@ end
 initial
 begin
 	uw3[6] = 1'b0;
-	uw3[6] = #24000 1'b1;
-	uw3[6] = #2000 1'b0;
+	uw3[6] = #22000 1'b1;
+	uw3[6] = #10000 1'b0;
 end 
 // uw3[ 5 ]
 initial
 begin
 	uw3[5] = 1'b0;
-	uw3[5] = #24000 1'b1;
-	uw3[5] = #2000 1'b0;
+	uw3[5] = #22000 1'b1;
+	uw3[5] = #10000 1'b0;
 end 
 // uw3[ 4 ]
 initial
 begin
 	uw3[4] = 1'b0;
-	uw3[4] = #24000 1'b1;
-	uw3[4] = #2000 1'b0;
+	uw3[4] = #22000 1'b1;
+	uw3[4] = #10000 1'b0;
 end 
 // uw3[ 3 ]
 initial
 begin
 	uw3[3] = 1'b0;
-	uw3[3] = #24000 1'b1;
-	uw3[3] = #2000 1'b0;
+	uw3[3] = #22000 1'b1;
+	uw3[3] = #10000 1'b0;
 end 
 // uw3[ 2 ]
 initial
 begin
 	uw3[2] = 1'b0;
-	uw3[2] = #24000 1'b1;
-	uw3[2] = #2000 1'b0;
+	uw3[2] = #22000 1'b1;
+	uw3[2] = #10000 1'b0;
 end 
 // uw3[ 1 ]
 initial

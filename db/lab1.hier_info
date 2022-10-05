@@ -1,8 +1,27 @@
-|datapath
-leftIn => LRhigh.IN0
+|top
+LED7 <= datapath:inst2.led[7]
+leftIn => datapath:inst2.leftIn
+leftIn => controlLogic:inst.leftIn
+rightIn => datapath:inst2.rightIn
+rightIn => controlLogic:inst.rightIn
+globalClock => datapath:inst2.g_clk
+globalClock => controlLogic:inst.globalClk
+globalReset => datapath:inst2.globalRes
+globalReset => inst4.IN0
+LED6 <= datapath:inst2.led[6]
+LED5 <= datapath:inst2.led[5]
+LED4 <= datapath:inst2.led[4]
+LED3 <= datapath:inst2.led[3]
+LED2 <= datapath:inst2.led[2]
+LED1 <= datapath:inst2.led[1]
+LED0 <= datapath:inst2.led[0]
+
+
+|top|datapath:inst2
+leftIn => displayCont.IN0
 leftIn => eightBitLeftShift:LMASK.enable
 leftIn => fourMux:mux4.s0
-rightIn => LRhigh.IN1
+rightIn => displayCont.IN1
 rightIn => eightBitRightShift:RMASK.enable
 rightIn => fourMux:mux4.s1
 g_clk => eightBitLeftShift:LMASK.clk
@@ -11,20 +30,21 @@ g_clk => eightBitRightShift:Display.clk
 globalRes => eightBitLeftShift:LMASK.reset
 globalRes => eightBitRightShift:RMASK.reset
 globalRes => eightBitRightShift:Display.reset
+pLoadD => displayCont.IN1
 pLoadD => h2InMux:mux2.en
 pLoadL => eightBitLeftShift:LMASK.controller
 pLoadR => eightBitRightShift:RMASK.controller
-led[0] << eightBitRightShift:Display.output0
-led[1] << eightBitRightShift:Display.output1
-led[2] << eightBitRightShift:Display.output2
-led[3] << eightBitRightShift:Display.output3
-led[4] << eightBitRightShift:Display.output4
-led[5] << eightBitRightShift:Display.output5
-led[6] << eightBitRightShift:Display.output6
-led[7] << eightBitRightShift:Display.output7
+led[0] <= eightBitRightShift:Display.output0
+led[1] <= eightBitRightShift:Display.output1
+led[2] <= eightBitRightShift:Display.output2
+led[3] <= eightBitRightShift:Display.output3
+led[4] <= eightBitRightShift:Display.output4
+led[5] <= eightBitRightShift:Display.output5
+led[6] <= eightBitRightShift:Display.output6
+led[7] <= eightBitRightShift:Display.output7
 
 
-|datapath|eightBitLeftShift:LMASK
+|top|datapath:inst2|eightBitLeftShift:LMASK
 controller => loadOp0.IN0
 controller => loadOp1.IN0
 controller => loadOp2.IN0
@@ -92,7 +112,7 @@ NOToutput[6] <= enardff_2:bit6.o_qBar
 NOToutput[7] <= enardff_2:bit7.o_qBar
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit0
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit0
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -101,7 +121,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit1
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit1
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -110,7 +130,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit2
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit2
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -119,7 +139,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit3
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit3
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -128,7 +148,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit4
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit4
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -137,7 +157,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit5
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit5
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -146,7 +166,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit6
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit6
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -155,7 +175,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitLeftShift:LMASK|enARdFF_2:bit7
+|top|datapath:inst2|eightBitLeftShift:LMASK|enARdFF_2:bit7
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -164,7 +184,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK
+|top|datapath:inst2|eightBitRightShift:RMASK
 controller => loadOp0.IN0
 controller => loadOp1.IN0
 controller => loadOp2.IN0
@@ -232,7 +252,7 @@ NOToutput[6] <= enardff_2:b2v_bit6.o_qBar
 NOToutput[7] <= enardff_2:b2v_bit7.o_qBar
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit0
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit0
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -241,7 +261,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit1
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit1
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -250,7 +270,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit2
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit2
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -259,7 +279,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit3
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit3
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -268,7 +288,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit4
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit4
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -277,7 +297,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit5
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit5
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -286,7 +306,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit6
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit6
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -295,7 +315,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:RMASK|enARdFF_2:b2v_bit7
+|top|datapath:inst2|eightBitRightShift:RMASK|enARdFF_2:b2v_bit7
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -304,7 +324,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|fourMux:mux4
+|top|datapath:inst2|fourMux:mux4
 uw0[0] => h2InMux:twoIN0.w0[0]
 uw0[1] => h2InMux:twoIN0.w0[1]
 uw0[2] => h2InMux:twoIN0.w0[2]
@@ -350,7 +370,7 @@ uy[6] <= h2InMux:twoIN2.y[6]
 uy[7] <= h2InMux:twoIN2.y[7]
 
 
-|datapath|fourMux:mux4|h2InMux:twoIN0
+|top|datapath:inst2|fourMux:mux4|h2InMux:twoIN0
 w0[0] => y.DATAA
 w0[1] => y.DATAA
 w0[2] => y.DATAA
@@ -385,7 +405,7 @@ y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|fourMux:mux4|h2InMux:twoIN1
+|top|datapath:inst2|fourMux:mux4|h2InMux:twoIN1
 w0[0] => y.DATAA
 w0[1] => y.DATAA
 w0[2] => y.DATAA
@@ -420,7 +440,7 @@ y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|fourMux:mux4|h2InMux:twoIN2
+|top|datapath:inst2|fourMux:mux4|h2InMux:twoIN2
 w0[0] => y.DATAA
 w0[1] => y.DATAA
 w0[2] => y.DATAA
@@ -455,7 +475,7 @@ y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|h2InMux:mux2
+|top|datapath:inst2|h2InMux:mux2
 w0[0] => y.DATAA
 w0[1] => y.DATAA
 w0[2] => y.DATAA
@@ -490,7 +510,7 @@ y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display
+|top|datapath:inst2|eightBitRightShift:Display
 controller => loadOp0.IN0
 controller => loadOp1.IN0
 controller => loadOp2.IN0
@@ -558,7 +578,7 @@ NOToutput[6] <= enardff_2:b2v_bit6.o_qBar
 NOToutput[7] <= enardff_2:b2v_bit7.o_qBar
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit0
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit0
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -567,7 +587,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit1
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit1
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -576,7 +596,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit2
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit2
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -585,7 +605,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit3
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit3
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -594,7 +614,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit4
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit4
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -603,7 +623,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit5
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit5
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -612,7 +632,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit6
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit6
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -621,12 +641,74 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|eightBitRightShift:Display|enARdFF_2:b2v_bit7
+|top|datapath:inst2|eightBitRightShift:Display|enARdFF_2:b2v_bit7
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
 i_clock => int_q.CLK
 o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|controlLogic:inst
+leftIn => sIn.IN1
+leftIn => sIn.IN1
+leftIn => sIn.IN1
+leftIn => sIn.IN1
+rightIn => sIn[1].IN1
+rightIn => sIn[2].IN1
+rightIn => sIn[3].IN1
+rightIn => sIn[4].IN1
+globalClk => dFF_2:state0.i_clock
+globalClk => dFF_2:state1.i_clock
+globalClk => dFF_2:state2.i_clock
+globalClk => dFF_2:state3.i_clock
+globalClk => dFF_2:state4.i_clock
+globalReset => dFF_2:state1.i_setBar
+globalReset => dFF_2:state2.i_setBar
+globalReset => dFF_2:state3.i_setBar
+globalReset => dFF_2:state4.i_setBar
+globalReset => dFF_2:state0.i_setBar
+pLoadD <= pLoadD.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= dFF_2:state0.o_q
+S[1] <= dFF_2:state1.o_q
+S[2] <= dFF_2:state2.o_q
+S[3] <= dFF_2:state3.o_q
+S[4] <= dFF_2:state4.o_q
+
+
+|top|controlLogic:inst|dFF_2:state0
+i_setBar => i_n.OUTPUTSELECT
+i_d => i_n.DATAA
+i_clock => i_n.CLK
+o_q <= i_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|controlLogic:inst|dFF_2:state1
+i_setBar => i_n.OUTPUTSELECT
+i_d => i_n.DATAA
+i_clock => i_n.CLK
+o_q <= i_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|controlLogic:inst|dFF_2:state2
+i_setBar => i_n.OUTPUTSELECT
+i_d => i_n.DATAA
+i_clock => i_n.CLK
+o_q <= i_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|controlLogic:inst|dFF_2:state3
+i_setBar => i_n.OUTPUTSELECT
+i_d => i_n.DATAA
+i_clock => i_n.CLK
+o_q <= i_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|controlLogic:inst|dFF_2:state4
+i_setBar => i_n.OUTPUTSELECT
+i_d => i_n.DATAA
+i_clock => i_n.CLK
+o_q <= i_n.DB_MAX_OUTPUT_PORT_TYPE
 
 

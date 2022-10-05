@@ -54,7 +54,7 @@ architecture structData of datapath is
 	signal mux2Out: std_logic_vector(7 downto 0);
 	signal RMASKout: std_logic_vector(7 downto 0);
 	signal LMASKout: std_logic_vector(7 downto 0);
-	signal LRhigh: std_logic;
+	signal displayCont: std_logic;
 	
 	signal vcc: std_logic := '1';
 	signal ground: std_logic := '0';
@@ -65,7 +65,7 @@ architecture structData of datapath is
 	begin
 	
 	leftOrRight <= RMASKout OR LMASKout;
-	LRhigh <= leftIn or rightIn;
+	displayCont <= leftIn or rightIn or pLoadD;
 	
 	LMASK: eightBitLeftShift PORT MAP(controller => pLoadL, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => leftIn, inp => "00000001",
 													output0 => LMASKout(0), output1 => LMASKout(1), output2 => LMASKout(2), output3 => LMASKout(3), output4 => LMASKout(4),
@@ -79,7 +79,7 @@ architecture structData of datapath is
 	
 	mux2: h2InMux port map(w0 => mux4Out, w1 => "00000000", en => pLoadD, y => mux2Out);
 	
-	Display: eightBitRightShift PORT MAP(controller => vcc, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => LRhigh, inp => mux2Out,
+	Display: eightBitRightShift PORT MAP(controller => vcc, clk => g_clk, reset => globalRes, shiftIn => vcc, enable => displayCont, inp => mux2Out,
 													output0 => led(0), output1 => led(1), output2 => led(2), output3 => led(3), output4 => led(4),
 													output5 => led(5), output6 => led(6), output7 => led(7), NOToutput => open);
 	

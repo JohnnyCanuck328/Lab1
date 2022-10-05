@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/04/2022 23:57:12"
+// Generated on "10/05/2022 13:28:42"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    eightBitLeftShift
 // 
@@ -491,7 +491,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#20000;
+#16000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -546,15 +546,15 @@ eightBitLeftShift i1 (
 always
 begin
 	clk = 1'b0;
-	clk = #500 1'b1;
-	#500;
+	clk = #1000 1'b1;
+	#1000;
 end 
 
 // controller
 initial
 begin
 	controller = 1'b1;
-	controller = #3000 1'b0;
+	controller = #4000 1'b0;
 end 
 
 // reset
@@ -562,70 +562,62 @@ initial
 begin
 	reset = 1'b1;
 	reset = #14000 1'b0;
-	reset = #2000 1'b1;
 end 
 
 // shiftIn
 initial
 begin
 	shiftIn = 1'b1;
-	shiftIn = #9000 1'b0;
-	shiftIn = #7000 1'b1;
+	shiftIn = #10000 1'b0;
 end 
 
 // enable
 initial
 begin
 	enable = 1'b0;
-	enable = #1000 1'b1;
+	enable = #2000 1'b1;
 end 
 // inp[ 7 ]
 initial
 begin
-	inp[7] = 1'b1;
-	inp[7] = #2000 1'b0;
+	inp[7] = 1'b0;
 end 
 // inp[ 6 ]
 initial
 begin
-	inp[6] = 1'b1;
-	inp[6] = #2000 1'b0;
+	inp[6] = 1'b0;
 end 
 // inp[ 5 ]
 initial
 begin
-	inp[5] = 1'b1;
-	inp[5] = #2000 1'b0;
+	inp[5] = 1'b0;
 end 
 // inp[ 4 ]
 initial
 begin
 	inp[4] = 1'b1;
-	inp[4] = #3000 1'b0;
+	inp[4] = #4000 1'b0;
 end 
 // inp[ 3 ]
 initial
 begin
 	inp[3] = 1'b1;
-	inp[3] = #3000 1'b0;
+	inp[3] = #4000 1'b0;
 end 
 // inp[ 2 ]
 initial
 begin
-	inp[2] = 1'b1;
-	inp[2] = #3000 1'b0;
+	inp[2] = 1'b0;
 end 
 // inp[ 1 ]
 initial
 begin
-	inp[1] = 1'b1;
-	inp[1] = #2000 1'b0;
+	inp[1] = 1'b0;
 end 
 // inp[ 0 ]
 initial
 begin
-	inp[0] = 1'b1;
-	inp[0] = #2000 1'b0;
+	inp[0] = 1'b0;
 end 
 
 eightBitLeftShift_vlg_sample_tst tb_sample (

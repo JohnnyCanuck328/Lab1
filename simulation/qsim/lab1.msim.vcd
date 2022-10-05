@@ -3,7 +3,7 @@ $comment
 		vcd file lab1.msim.vcd -direction
 $end
 $date
-	Wed Oct 05 07:12:55 2022
+	Wed Oct 05 17:40:44 2022
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,126 +11,132 @@ $end
 $timescale
 	1ps
 $end
-$scope module datapath_vlg_vec_tst $end
-$var reg 1 ! g_clk $end
-$var reg 1 " globalRes $end
+$scope module top_vlg_vec_tst $end
+$var reg 1 ! globalClock $end
+$var reg 1 " globalReset $end
 $var reg 1 # leftIn $end
-$var reg 1 $ pLoadD $end
-$var reg 1 % pLoadL $end
-$var reg 1 & pLoadR $end
-$var reg 1 ' rightIn $end
-$var wire 1 ( led [7] $end
-$var wire 1 ) led [6] $end
-$var wire 1 * led [5] $end
-$var wire 1 + led [4] $end
-$var wire 1 , led [3] $end
-$var wire 1 - led [2] $end
-$var wire 1 . led [1] $end
-$var wire 1 / led [0] $end
-$var wire 1 0 sampler $end
+$var reg 1 $ rightIn $end
+$var wire 1 % LED0 $end
+$var wire 1 & LED1 $end
+$var wire 1 ' LED2 $end
+$var wire 1 ( LED3 $end
+$var wire 1 ) LED4 $end
+$var wire 1 * LED5 $end
+$var wire 1 + LED6 $end
+$var wire 1 , LED7 $end
+$var wire 1 - sampler $end
 $scope module i1 $end
-$var wire 1 1 gnd $end
-$var wire 1 2 vcc $end
-$var wire 1 3 unknown $end
-$var tri1 1 4 devclrn $end
-$var tri1 1 5 devpor $end
-$var tri1 1 6 devoe $end
-$var wire 1 7 ~QUARTUS_CREATED_GND~I_combout $end
-$var wire 1 8 g_clk~input_o $end
-$var wire 1 9 g_clk~inputCLKENA0_outclk $end
-$var wire 1 : leftIn~input_o $end
-$var wire 1 ; rightIn~input_o $end
-$var wire 1 < LMASK|bit0|int_q~feeder_combout $end
-$var wire 1 = globalRes~input_o $end
-$var wire 1 > LMASK|bit0|int_q~q $end
-$var wire 1 ? pLoadR~input_o $end
-$var wire 1 @ RMASK|b2v_bit7|int_q~feeder_combout $end
-$var wire 1 A RMASK|b2v_bit7|int_q~q $end
-$var wire 1 B RMASK|shiftOp6~combout $end
-$var wire 1 C RMASK|b2v_bit6|int_q~q $end
-$var wire 1 D RMASK|shiftOp5~combout $end
-$var wire 1 E RMASK|b2v_bit5|int_q~q $end
-$var wire 1 F RMASK|shiftOp4~combout $end
-$var wire 1 G RMASK|b2v_bit4|int_q~q $end
-$var wire 1 H RMASK|shiftOp3~combout $end
-$var wire 1 I RMASK|b2v_bit3|int_q~q $end
-$var wire 1 J RMASK|shiftOp2~combout $end
-$var wire 1 K RMASK|b2v_bit2|int_q~q $end
-$var wire 1 L RMASK|shiftOp1~combout $end
-$var wire 1 M RMASK|b2v_bit1|int_q~q $end
-$var wire 1 N RMASK|shiftOp0~combout $end
-$var wire 1 O RMASK|b2v_bit0|int_q~q $end
-$var wire 1 P mux2|y[0]~0_combout $end
-$var wire 1 Q pLoadD~input_o $end
-$var wire 1 R Display|b2v_bit0|int_q~0_combout $end
-$var wire 1 S Display|b2v_bit0|int_q~1_combout $end
-$var wire 1 T Display|b2v_bit0|int_q~q $end
-$var wire 1 U pLoadL~input_o $end
-$var wire 1 V LMASK|shiftOp1~combout $end
-$var wire 1 W LMASK|bit1|int_q~q $end
-$var wire 1 X mux2|y[1]~1_combout $end
-$var wire 1 Y Display|b2v_bit1|int_q~q $end
-$var wire 1 Z LMASK|shiftOp2~combout $end
-$var wire 1 [ LMASK|bit2|int_q~q $end
-$var wire 1 \ mux2|y[2]~2_combout $end
-$var wire 1 ] Display|b2v_bit2|int_q~q $end
-$var wire 1 ^ LMASK|shiftOp3~combout $end
-$var wire 1 _ LMASK|bit3|int_q~q $end
-$var wire 1 ` mux2|y[3]~3_combout $end
-$var wire 1 a Display|b2v_bit3|int_q~q $end
-$var wire 1 b LMASK|shiftOp4~combout $end
-$var wire 1 c LMASK|bit4|int_q~q $end
-$var wire 1 d mux2|y[4]~4_combout $end
-$var wire 1 e Display|b2v_bit4|int_q~q $end
-$var wire 1 f LMASK|shiftOp5~combout $end
-$var wire 1 g LMASK|bit5|int_q~q $end
-$var wire 1 h mux2|y[5]~5_combout $end
-$var wire 1 i Display|b2v_bit5|int_q~q $end
-$var wire 1 j LMASK|shiftOp6~combout $end
-$var wire 1 k LMASK|bit6|int_q~q $end
-$var wire 1 l mux2|y[6]~6_combout $end
-$var wire 1 m Display|b2v_bit6|int_q~q $end
-$var wire 1 n LMASK|shiftOp7~combout $end
-$var wire 1 o LMASK|bit7|int_q~q $end
-$var wire 1 p mux2|y[7]~7_combout $end
-$var wire 1 q Display|b2v_bit7|int_q~q $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 5 globalClock~input_o $end
+$var wire 1 6 globalClock~inputCLKENA0_outclk $end
+$var wire 1 7 rightIn~input_o $end
+$var wire 1 8 leftIn~input_o $end
+$var wire 1 9 inst2|RMASK|b2v_bit7|int_q~feeder_combout $end
+$var wire 1 : globalReset~input_o $end
+$var wire 1 ; inst2|RMASK|b2v_bit7|int_q~q $end
+$var wire 1 < inst|state0|i_n~0_combout $end
+$var wire 1 = inst|state0|i_n~q $end
+$var wire 1 > inst2|LMASK|bit0|int_q~feeder_combout $end
+$var wire 1 ? inst2|LMASK|bit0|int_q~q $end
+$var wire 1 @ inst2|LMASK|shiftOp1~combout $end
+$var wire 1 A inst2|LMASK|bit1|int_q~q $end
+$var wire 1 B inst2|LMASK|shiftOp2~combout $end
+$var wire 1 C inst2|LMASK|bit2|int_q~q $end
+$var wire 1 D inst2|LMASK|shiftOp3~combout $end
+$var wire 1 E inst2|LMASK|bit3|int_q~q $end
+$var wire 1 F inst2|LMASK|shiftOp4~combout $end
+$var wire 1 G inst2|LMASK|bit4|int_q~q $end
+$var wire 1 H inst2|LMASK|shiftOp5~combout $end
+$var wire 1 I inst2|LMASK|bit5|int_q~q $end
+$var wire 1 J inst2|LMASK|shiftOp6~combout $end
+$var wire 1 K inst2|LMASK|bit6|int_q~q $end
+$var wire 1 L inst2|LMASK|shiftOp7~combout $end
+$var wire 1 M inst2|LMASK|bit7|int_q~q $end
+$var wire 1 N inst2|mux2|y[7]~0_combout $end
+$var wire 1 O inst|state3|i_n~q $end
+$var wire 1 P inst|state2|i_n~q $end
+$var wire 1 Q inst|state1|i_n~q $end
+$var wire 1 R inst|state~combout $end
+$var wire 1 S inst|state4|i_n~q $end
+$var wire 1 T inst2|Display|b2v_bit7|int_q~0_combout $end
+$var wire 1 U inst2|displayCont~combout $end
+$var wire 1 V inst2|Display|b2v_bit7|int_q~q $end
+$var wire 1 W inst2|RMASK|shiftOp6~combout $end
+$var wire 1 X inst2|RMASK|b2v_bit6|int_q~q $end
+$var wire 1 Y inst2|mux2|y[6]~1_combout $end
+$var wire 1 Z inst2|Display|b2v_bit6|int_q~q $end
+$var wire 1 [ inst2|RMASK|shiftOp5~combout $end
+$var wire 1 \ inst2|RMASK|b2v_bit5|int_q~q $end
+$var wire 1 ] inst2|mux2|y[5]~2_combout $end
+$var wire 1 ^ inst2|Display|b2v_bit5|int_q~q $end
+$var wire 1 _ inst2|RMASK|shiftOp4~combout $end
+$var wire 1 ` inst2|RMASK|b2v_bit4|int_q~q $end
+$var wire 1 a inst2|mux2|y[4]~3_combout $end
+$var wire 1 b inst2|Display|b2v_bit4|int_q~q $end
+$var wire 1 c inst2|RMASK|shiftOp3~combout $end
+$var wire 1 d inst2|RMASK|b2v_bit3|int_q~q $end
+$var wire 1 e inst2|mux2|y[3]~4_combout $end
+$var wire 1 f inst2|Display|b2v_bit3|int_q~q $end
+$var wire 1 g inst2|RMASK|shiftOp2~combout $end
+$var wire 1 h inst2|RMASK|b2v_bit2|int_q~q $end
+$var wire 1 i inst2|mux2|y[2]~5_combout $end
+$var wire 1 j inst2|Display|b2v_bit2|int_q~q $end
+$var wire 1 k inst2|RMASK|shiftOp1~combout $end
+$var wire 1 l inst2|RMASK|b2v_bit1|int_q~q $end
+$var wire 1 m inst2|mux2|y[1]~6_combout $end
+$var wire 1 n inst2|Display|b2v_bit1|int_q~q $end
+$var wire 1 o inst2|RMASK|shiftOp0~combout $end
+$var wire 1 p inst2|RMASK|b2v_bit0|int_q~q $end
+$var wire 1 q inst2|mux2|y[0]~7_combout $end
+$var wire 1 r inst2|Display|b2v_bit0|int_q~q $end
+$var wire 1 s inst|sIn [4] $end
+$var wire 1 t inst|sIn [3] $end
+$var wire 1 u inst|sIn [2] $end
+$var wire 1 v inst|sIn [1] $end
+$var wire 1 w inst|sIn [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
-1"
-1#
-1$
-1%
-1&
-1'
-0/
-0.
-0-
-0,
-0+
-0*
-0)
+0"
+0#
+0$
+0%
+0&
+0'
 0(
+0)
+0*
+0+
+0,
+x-
+0.
+1/
 x0
-01
+11
 12
-x3
-14
-15
-16
+13
+04
+05
+06
 07
 08
-09
-1:
-1;
+19
+0:
+0;
 1<
-1=
-0>
-1?
-1@
+0=
+1>
+0?
+0@
 0A
 0B
 0C
@@ -147,11 +153,11 @@ x3
 0N
 0O
 0P
-1Q
+0Q
 1R
-1S
-0T
-1U
+0S
+1T
+0U
 0V
 0W
 0X
@@ -180,234 +186,197 @@ x3
 0o
 0p
 0q
+0r
+zw
+0v
+0u
+0t
+0s
 $end
 #1000
 1!
-18
-19
-00
-1A
-1>
-1p
-1P
-#2000
-0$
-0&
-0%
-0!
-0Q
-0?
-0U
-08
-09
-10
-0R
-1B
-1V
-#3000
-1!
-18
-19
-00
-1W
-1C
-1q
-1T
-1X
-1Z
-1D
-1l
-1(
-1/
-#4000
-0!
-08
-09
-10
-#5000
-1!
-18
-19
-00
-1[
-1E
-1m
-1Y
-1\
-1^
-1F
-1h
-1)
-1.
-#6000
-0'
-0!
-0;
-08
-09
-10
-0h
-0l
-0p
-#7000
-1!
-18
-19
-00
-1_
-0q
-0m
-1]
-1`
-1b
-0(
-0)
-1-
-#8000
-0#
-1'
-0!
-0:
-1;
-08
-09
-10
-0P
-0X
-0\
-0`
-1h
-1l
-1p
-#9000
-1!
-18
-19
-00
-1G
-1q
-1m
-1i
-0]
-0Y
-0T
-1H
-1d
-1(
-1)
-1*
+15
+16
 0-
-0.
-0/
-#10000
-0'
-0!
-0;
-08
-09
-10
-1P
-1R
-0S
-1X
-1\
-1`
-0d
-0h
-0l
-0p
-#11000
-1!
-18
-19
-00
-#12000
-0!
-08
-09
-10
-#13000
-1!
-18
-19
-00
-#14000
-0"
-0!
-0=
-08
-09
-10
-0_
-0[
-0W
-0G
-0E
-0C
-0A
-0>
-0q
-0m
-0i
-0`
-0b
-0\
-0^
-0X
-0Z
-0H
-0F
-0D
-0B
-0P
-0V
-0(
-0)
-0*
-#15000
-1!
-18
-19
-00
-#16000
-1#
-1'
+1=
+0R
+1U
+1s
+#2000
 1"
+1$
 0!
 1:
+17
+05
+06
+1-
+0<
+1u
+0s
+#3000
+1!
+15
+16
+0-
+1P
+0=
 1;
-1=
+0T
+1W
+1N
+#4000
+1#
+0!
+18
+05
+06
+1-
+0u
+1v
+#5000
+1!
+15
+16
+0-
+1X
+1Q
+0P
+1?
+1V
+1Y
+1[
+1@
+1q
+1,
+#6000
+0!
+05
+06
+1-
+#7000
+1!
+15
+16
+0-
+1\
+1A
+1r
+1Z
+1]
+1_
+1B
+1m
+1%
+1+
+#8000
+0$
+0!
+07
+05
+06
+1-
+0N
+1t
+0v
+0Y
+0]
+#9000
+1!
+15
+16
+0-
+0Q
+1O
+1C
+1n
+0Z
+0V
+1D
+1i
+1&
+0+
+0,
+#10000
+0#
+0!
 08
-09
-10
-0R
+05
+06
+1-
+0t
+1s
+1T
+0U
+#11000
+1!
+15
+16
+0-
 1S
+0O
+1U
+#12000
+1#
+0!
+18
+05
+06
+1-
+1t
+0s
+#13000
+1!
+15
+16
+0-
+0S
+1O
+1E
+0r
+0n
+0T
+1F
+1e
+0%
+0&
+#14000
+0#
+0!
+08
+05
+06
+1-
+0t
+1s
+1T
+0U
+#15000
+1!
+15
+16
+0-
+1S
+0O
+1U
+#16000
+0!
+05
+06
+1-
 #17000
 1!
-18
-19
-00
-1A
-1>
-1B
-1p
-1P
-1V
+15
+16
+0-
 #18000
-0#
-0'
 0!
-0:
-0;
-08
-09
-10
-1R
-0S
-0p
+05
+06
+1-
 #19000
 1!
-18
-19
-00
+15
+16
+0-
 #20000

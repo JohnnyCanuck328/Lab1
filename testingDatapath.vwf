@@ -211,9 +211,7 @@ TRANSITION_LIST("globalRes")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 14.0;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
 
@@ -295,8 +293,8 @@ TRANSITION_LIST("leftIn")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 8.0;
-		LEVEL 0 FOR 8.0;
-		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 6.0;
+		LEVEL 1 FOR 4.0;
 		LEVEL 0 FOR 2.0;
 	}
 }
@@ -307,7 +305,9 @@ TRANSITION_LIST("pLoadD")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 18.0;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 6.0;
 	}
 }
 

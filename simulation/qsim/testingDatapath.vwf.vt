@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/05/2022 07:12:53"
+// Generated on "10/05/2022 09:22:51"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    datapath
 // 
@@ -326,8 +326,6 @@ end
 initial
 begin
 	globalRes = 1'b1;
-	globalRes = #14000 1'b0;
-	globalRes = #2000 1'b1;
 end 
 
 // rightIn
@@ -346,8 +344,8 @@ initial
 begin
 	leftIn = 1'b1;
 	leftIn = #8000 1'b0;
-	leftIn = #8000 1'b1;
-	leftIn = #2000 1'b0;
+	leftIn = #6000 1'b1;
+	leftIn = #4000 1'b0;
 end 
 
 // pLoadD
@@ -355,6 +353,8 @@ initial
 begin
 	pLoadD = 1'b1;
 	pLoadD = #2000 1'b0;
+	pLoadD = #8000 1'b1;
+	pLoadD = #4000 1'b0;
 end 
 
 // pLoadR
