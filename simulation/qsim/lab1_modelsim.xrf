@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/grobb/Downloads/DE2_PinAssignment (1).qsf
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/dFF_2.vhd
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/datapath.vhd
 source_file = 1, C:/Users/grobb/Documents/University/Digital_Systems/Labs/Lab_1/VHDL/lab1/eightBitRightShift.vhd

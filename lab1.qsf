@@ -83,3 +83,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE testingControl.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE testingDFF.vwf
 set_global_assignment -name BDF_FILE top.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE testingTop.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
